@@ -1,31 +1,169 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>YOMON。LAB｜試してから、書く。</title>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AIに1万円を渡して仕事が快適になるデスク環境を選ばせるYOMON。LAB 001。">
+<title>AIに1万円渡した。｜YOMON。LAB 001</title>
 <style>
-*{box-sizing:border-box} :root{--bg:#f3f0e8;--ink:#111;--paper:#fff;--muted:#6b6861;--line:#c9c4b9}
+*{box-sizing:border-box}
+:root{--bg:#f3f0e8;--ink:#111;--paper:#fff;--muted:#6b6861;--line:#c9c4b9;--soft:#ebe7de}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.75}
-a{color:inherit;text-decoration:none}.bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:rgba(243,240,232,.95);border-bottom:1px solid #111}
-.logo{font-weight:950;font-size:28px;letter-spacing:-.07em}.nav{display:flex;gap:18px;font-size:11px;font-weight:850;letter-spacing:.08em}
-.wrap{width:min(1180px,90vw);margin:auto}.hero{padding:10vh 0 7vh;border-bottom:1px solid #111}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.16em}
-h1,h2,h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;letter-spacing:-.045em}h1{font-size:clamp(58px,10vw,132px);line-height:.95;margin:30px 0}h2{font-size:clamp(34px,5vw,62px);line-height:1.15}
-.dek{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(20px,2.6vw,32px);max-width:760px}
-.section{padding:9vh 0;border-bottom:1px solid #111}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{display:block;background:#fff;border:1px solid #111;padding:30px;min-height:260px}.card small{font-weight:900;letter-spacing:.12em}.card h3{font-size:clamp(27px,3vw,42px);line-height:1.25;margin:25px 0 12px}.card p{color:var(--muted)}
-.black{background:#111;color:#fff}.black p{color:#ddd}.list a{display:grid;grid-template-columns:70px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #111;align-items:center}.list strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:22px}
-.pill{display:inline-block;border:1px solid currentColor;border-radius:100px;padding:5px 10px;font-size:10px;font-weight:900}
-footer{padding:40px 5vw 70px;font-size:11px;font-weight:800}.comic-frame{background:#fff;border:1px solid #111;padding:28px;margin:18px 0;min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
-.comic-frame .num{font-size:11px;font-weight:900}.comic-frame .line{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(26px,4vw,48px);line-height:1.35}.cta{display:block;background:#111;color:#fff;padding:34px;margin-top:50px}.cta strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:30px}
-@media(max-width:720px){.nav{gap:9px;font-size:9px}.grid{grid-template-columns:1fr}.list a{grid-template-columns:45px 1fr}.list a span:last-child{display:none}.hero{padding-top:7vh}}
+a{color:inherit;text-decoration:none}
+.bar{position:sticky;top:0;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:rgba(243,240,232,.96);border-bottom:1px solid #111;backdrop-filter:blur(12px)}
+.logo{font-weight:950;font-size:29px;letter-spacing:-.07em}
+.nav{display:flex;gap:15px;font-size:10px;font-weight:900;letter-spacing:.09em}
+.wrap{width:min(1180px,90vw);margin:auto}
+.hero{padding:9vh 0 7vh;border-bottom:1px solid #111}
+.eyebrow{font-size:11px;font-weight:900;letter-spacing:.16em}
+h1,h2,h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;letter-spacing:-.045em}
+h1{font-size:clamp(58px,10vw,130px);line-height:.96;margin:25px 0}
+h2{font-size:clamp(35px,5vw,64px);line-height:1.15}
+h3{font-size:clamp(25px,3vw,39px);line-height:1.28}
+.dek{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(20px,2.5vw,32px);max-width:800px}
+.section{padding:9vh 0;border-bottom:1px solid #111}
+.status{display:inline-flex;align-items:center;gap:8px;border:1px solid #111;border-radius:100px;padding:6px 11px;font-size:10px;font-weight:900;letter-spacing:.07em}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.product{background:#fff;border:1px solid #111;overflow:hidden}
+.product-visual{height:220px;background:var(--soft);display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid #111}
+.product-visual .type{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(38px,6vw,68px);letter-spacing:-.04em}
+.product-visual .num{position:absolute;top:16px;left:18px;font-size:10px;font-weight:900;letter-spacing:.15em}
+.product-body{padding:28px}
+.product-name{font-weight:900;font-size:13px;letter-spacing:.02em}
+.price{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:35px;margin:12px 0}
+.meta{display:grid;grid-template-columns:105px 1fr;gap:9px;font-size:13px;padding:7px 0;border-top:1px solid var(--line)}
+.meta b{font-size:10px;letter-spacing:.08em}
+.note{margin:20px 0;padding:18px;border-left:4px solid #111;background:var(--soft);font-size:14px}
+.shops{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:18px}
+.shop{border:1px solid #111;padding:12px 10px;text-align:center;font-size:11px;font-weight:900}
+.shop:hover{background:#111;color:#fff}
+.shop.disabled{color:#aaa;border-color:#ccc;pointer-events:none}
+.total{background:#111;color:#fff;padding:7vh 5vw;margin:7vh 0}
+.total .amount{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(60px,10vw,120px);line-height:1}
+.total-grid{display:flex;justify-content:space-between;gap:30px;align-items:end;flex-wrap:wrap}
+.rejected{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.reject{border-top:1px solid #111;padding:20px 0}
+.reject strong{display:block;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:23px;margin-bottom:8px}
+.small{font-size:12px;color:var(--muted)}
+.cta{display:block;background:#111;color:#fff;padding:30px;margin-top:30px}
+.cta strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:30px}
+.select-rule{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid #111}
+.select-rule div{padding:25px 15px;border-right:1px solid #111;text-align:center}
+.select-rule div:last-child{border-right:0}
+.select-rule b{display:block;font-size:11px;letter-spacing:.1em}
+.select-rule span{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:20px}
+.item-link{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;border-top:1px solid #111}
+.item-link strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:24px}
+.disclosure{font-size:11px;color:var(--muted);padding:15px 0}
+footer{padding:40px 5vw 70px;font-size:11px;font-weight:800}
+@media(max-width:720px){
+ .nav{gap:8px;font-size:8px}.grid{grid-template-columns:1fr}.shops{grid-template-columns:1fr 1fr}
+ .rejected{grid-template-columns:1fr}.select-rule{grid-template-columns:1fr}.select-rule div{border-right:0;border-bottom:1px solid #111}.select-rule div:last-child{border-bottom:0}
+ .product-visual{height:180px}
+}
 </style>
 </head>
-<body><header class="bar"><a class="logo" href="../index.html">YOMON。</a><nav class="nav"><a href="../articles/search-day.html">COVER</a><a href="./">LAB</a><a href="../comic/">COMIC</a></nav></header>
-<main class="wrap"><section class="hero"><div class="eyebrow">YOMON。LAB / EXPERIMENTS</div><h1>試してから、<br>書く。</h1><p class="dek">ネットで見かけた「本当？」を、そのままにしない。選ぶ。比べる。失敗する。結果まで読みものにする実験室。</p></section>
-<section class="section"><span class="pill">LAB 001 / IN PROGRESS</span><h2>1万円の使い方に、<br>性格が出た。</h2><p class="dek">AIと人間に同じ1万円。仕事が快適になるデスク環境を選ばせたら、考え方がまるで違った。</p>
+<body>
+<header class="bar"><a class="logo" href="../index.html">YOMON。</a><nav class="nav"><a href="../articles/search-day.html">COVER</a><a href="./">LAB</a><a href="../comic/">COMIC</a><a href="../select/">SELECT</a></nav></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">YOMON。LAB 001 / AI vs HUMAN</div><h1>1万円の使い方に、<br>性格が出た。</h1>
+<p class="dek">「仕事がちょっと快適になるものを選んで。」同じ1万円でも、AIは“小さい不満を4つ消す”ことを選んだ。</p></section>
+
+<section class="section"><div class="eyebrow">AI SIDE / FIRST SELECTION</div><h2>AIが選んだ、<br>4つの地味な改善。</h2>
+<p>高級キーボードも、変なAIガジェットもない。ライト、スタンド、マウス、そして968円のケーブルホルダーだった。</p>
 <div class="grid">
-<div class="card"><small>AI SIDE</small><h3>小さい不満を、4つ消す。</h3><p>光・高さ・入力・配線へ分散。暫定合計 ¥9,547。残金 ¥453。</p></div>
-<div class="card black"><small>HUMAN SIDE</small><h3>毎日触るものに、深く使う。</h3><p>商品数ではなく、所有満足と「毎日使いたい」を優先。現在選考中。</p></div>
-</div>
-<a class="cta" href="../comic/lab-001/"><small>3分で読むなら COMIC →</small><br><strong>「AIに1万円渡した。」</strong></a></section>
-<section class="section"><div class="eyebrow">LAB RULES</div><h2>結論を、先に作らない。</h2><div class="list">
-<a><b>01</b><strong>疑う。</strong><span>SNS・広告・口コミの「本当？」から始める</span></a>
-<a><b>02</b><strong>選ぶ。</strong><span>採用だけでなく落選理由も残す</span></a>
-<a><b>03</b><strong>試す。</strong><span>未検証なら未検証と書く</span></a>
-<a><b>04</b><strong>残す。</strong><span>良かったものだけSELECTへ</span></a>
-</div></section></main><footer>© YOMON。 / LAB — まだ知らない方が、面白い。</footer></body></html>
+    <article class="product">
+      <div class="product-visual"><span class="num">AI PICK 01</span><div class="type">LIGHT</div></div>
+      <div class="product-body">
+        <div class="product-name">クランプ式 LEDデスクライト</div>
+        <div class="price">¥2,399</div>
+        <span class="status">PICKED / 未検証</span>
+        <div class="meta"><b>WHY</b><span>机の面積をほぼ使わず、作業中ずっと影響する「光」を改善する。</span></div>
+        <div class="meta"><b>WEAKNESS</b><span>照明環境がすでに整っている人には優先度が低い。</span></div>
+        <div class="note"><b>YOMON。判定</b><br>合理性 ★★★★★ / 派手さ ★★☆☆☆</div>
+        <div class="shops">
+          <a class="shop" href="https://www.amazon.co.jp/dp/B0GSFG3FVG" target="_blank" rel="noopener">Amazonで確認</a>
+          <a class="shop" href="https://search.rakuten.co.jp/search/mall/%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%97%E5%BC%8F%20LED%20%E3%83%87%E3%82%B9%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%88%203%E8%89%B2%2010%E6%AE%B5%E9%9A%8E/" target="_blank" rel="noopener">楽天市場で確認</a>
+          <a class="shop" href="https://shopping.yahoo.co.jp/search?p=%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%97%E5%BC%8F%20LED%20%E3%83%87%E3%82%B9%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%88" target="_blank" rel="noopener">Yahoo!で確認</a>
+          <a class="shop" href="https://www.amazon.co.jp/dp/B0GSFG3FVG" target="_blank" rel="noopener">公式 / 掲載元</a>
+        </div>
+        <p class="small">※価格は2026年8月12日の調査時点の参考情報。購入時に各販売先で再確認してください。</p>
+      </div>
+    </article>
+    
+    <article class="product">
+      <div class="product-visual"><span class="num">AI PICK 02</span><div class="type">STAND</div></div>
+      <div class="product-body">
+        <div class="product-name">折りたたみ式 ノートPCスタンド</div>
+        <div class="price">¥3,870〜</div>
+        <span class="status">PICKED / 未検証</span>
+        <div class="meta"><b>WHY</b><span>画面位置と机上スペースを変え、姿勢の不満をまとめて改善できる可能性がある。</span></div>
+        <div class="meta"><b>WEAKNESS</b><span>外付けモニター中心の人やデスクトップPC利用者には不要。</span></div>
+        <div class="note"><b>YOMON。判定</b><br>合理性 ★★★★☆ / 汎用性 ★★★★☆</div>
+        <div class="shops">
+          <a class="shop" href="https://www.amazon.co.jp/s?k=%E3%83%8E%E3%83%BC%E3%83%88PC%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%20%E6%8A%98%E3%82%8A%E3%81%9F%E3%81%9F%E3%81%BF%20%E8%A7%92%E5%BA%A6%E8%AA%BF%E6%95%B4" target="_blank" rel="noopener">Amazonで確認</a>
+          <a class="shop" href="https://item.rakuten.co.jp/minnanoss/ms-36usletri8sjhqci/" target="_blank" rel="noopener">楽天市場で確認</a>
+          <a class="shop" href="https://shopping.yahoo.co.jp/search?p=%E3%83%8E%E3%83%BC%E3%83%88PC%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%20%E6%8A%98%E3%82%8A%E3%81%9F%E3%81%9F%E3%81%BF%20%E8%A7%92%E5%BA%A6%E8%AA%BF%E6%95%B4" target="_blank" rel="noopener">Yahoo!で確認</a>
+          <a class="shop" href="https://item.rakuten.co.jp/minnanoss/ms-36usletri8sjhqci/" target="_blank" rel="noopener">公式 / 掲載元</a>
+        </div>
+        <p class="small">※価格は2026年8月12日の調査時点の参考情報。購入時に各販売先で再確認してください。</p>
+      </div>
+    </article>
+    
+    <article class="product">
+      <div class="product-visual"><span class="num">AI PICK 03</span><div class="type">MOUSE</div></div>
+      <div class="product-body">
+        <div class="product-name">Logicool M240 Silent Bluetoothマウス</div>
+        <div class="price">¥2,310</div>
+        <span class="status">PICKED / 未検証</span>
+        <div class="meta"><b>WHY</b><span>毎日何百回も触る入力部分を、静音性とBluetooth接続で地味に改善する。</span></div>
+        <div class="meta"><b>WEAKNESS</b><span>多ボタン・高速スクロールなど高機能を求める人には物足りない。</span></div>
+        <div class="note"><b>YOMON。判定</b><br>合理性 ★★★★★ / 所有満足 ★★★☆☆</div>
+        <div class="shops">
+          <a class="shop" href="https://www.amazon.co.jp/s?k=Logicool%20M240%20Silent" target="_blank" rel="noopener">Amazonで確認</a>
+          <a class="shop" href="https://search.rakuten.co.jp/search/mall/Logicool%20M240%20Silent/" target="_blank" rel="noopener">楽天市場で確認</a>
+          <a class="shop" href="https://shopping.yahoo.co.jp/search?p=Logicool%20M240%20Silent" target="_blank" rel="noopener">Yahoo!で確認</a>
+          <a class="shop" href="https://www.logicool.co.jp/ja-jp/shop/p/m240-silent-bluetooth-mouse" target="_blank" rel="noopener">公式 / 掲載元</a>
+        </div>
+        <p class="small">※価格は2026年8月12日の調査時点の参考情報。購入時に各販売先で再確認してください。</p>
+      </div>
+    </article>
+    
+    <article class="product">
+      <div class="product-visual"><span class="num">AI PICK 04</span><div class="type">CABLE</div></div>
+      <div class="product-body">
+        <div class="product-name">ELECOM 断線防止型ケーブルホルダー EKC-CHS01BK</div>
+        <div class="price">¥968</div>
+        <span class="status">PICKED / 未検証</span>
+        <div class="meta"><b>WHY</b><span>ケーブルが落ちる・端子を探すという小さなストレスを毎日消す。</span></div>
+        <div class="meta"><b>WEAKNESS</b><span>ケーブル本数が少ない人には体感差が小さい。</span></div>
+        <div class="note"><b>YOMON。判定</b><br>合理性 ★★★★★ / 欲しくなる度 ★★☆☆☆</div>
+        <div class="shops">
+          <a class="shop" href="https://www.amazon.co.jp/s?k=EKC-CHS01BK" target="_blank" rel="noopener">Amazonで確認</a>
+          <a class="shop" href="https://search.rakuten.co.jp/search/mall/EKC-CHS01BK/" target="_blank" rel="noopener">楽天市場で確認</a>
+          <a class="shop" href="https://shopping.yahoo.co.jp/search?p=EKC-CHS01BK" target="_blank" rel="noopener">Yahoo!で確認</a>
+          <a class="shop" href="https://shop.elecom.co.jp/category/CABLEAC/4549550242271.html" target="_blank" rel="noopener">公式 / 掲載元</a>
+        </div>
+        <p class="small">※価格は2026年8月12日の調査時点の参考情報。購入時に各販売先で再確認してください。</p>
+      </div>
+    </article>
+    </div>
+
+<div class="total"><div class="total-grid"><div><div class="eyebrow">AI TOTAL</div><div class="amount">¥9,547</div></div><div><p>予算 ¥10,000</p><p><strong>残金 ¥453</strong></p><p>AIは、予算だからといって使い切らなかった。</p></div></div></div>
+</section>
+
+<section class="section"><div class="eyebrow">REJECTED</div><h2>なぜ、こっちは落とした？</h2>
+<div class="rejected">
+<div class="reject"><strong>高級マウス</strong><p>1商品で予算の大半を使う。今回のAI側の思想「複数の小さな不満を消す」と合わない。</p></div>
+<div class="reject"><strong>高級モニターライト</strong><p>魅力はあるが、1万円という制約では他の改善を犠牲にしすぎる。</p></div>
+<div class="reject"><strong>多機能ドック</strong><p>便利だが、必要な端子構成が人によって違いすぎる。万人向けの1万円としては保留。</p></div>
+</div></section>
+
+<section class="section"><div class="eyebrow">HUMAN SIDE</div><h2>人間は、<br>毎日触るものに深く使う。</h2>
+<p class="dek">AIの「広く改善」に対して、人間側は「狭く深く」。所有満足と“毎日使いたい”を優先して現在選考中。</p>
+<span class="status">IN PROGRESS</span>
+<a class="cta" href="../comic/lab-001/"><small>3分で読むなら → YOMON。COMIC</small><br><strong>「AIに1万円渡した。」</strong></a>
+</section>
+
+<section class="section"><div class="eyebrow">COMMERCE POLICY</div><h2>売るために、選ばない。</h2>
+<p>現在の購入先リンクは通常リンクです。アフィリエイト導入後も、報酬額ではなく読者が選びやすい順で複数の販売先を表示します。</p>
+<p class="small">※YOMON。が実際に購入・使用するまでは「未検証」と表示し、使用済み・おすすめ済みとは表現しません。</p></section>
+</main>
+<footer>© YOMON。 / LAB — 声は拾う。作品はコピーしない。</footer></body></html>
