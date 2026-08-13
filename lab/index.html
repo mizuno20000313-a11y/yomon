@@ -1,12 +1,75 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIに1万円、渡してみた。｜YOMON。LAB #001</title>
-<style>*{box-sizing:border-box}:root{--bg:#f7f3ea;--ink:#151515;--yellow:#efb72e;--red:#d64239;--purple:#7651a8;--green:#278559;--paper:#fffdf8}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",sans-serif;line-height:1.9}a{color:inherit;text-decoration:none}header{border-bottom:1px solid;position:sticky;top:0;background:#f7f3eaf2;z-index:10}.head,.wrap{width:min(1120px,92vw);margin:auto}.head{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font:900 38px Georgia;letter-spacing:-.07em}.logo i{color:var(--red);font-style:normal}.back{font-size:10px;font-weight:900;border-bottom:1px solid}.hero{width:min(1240px,94vw);margin:auto;padding:7vh 0}.label{background:var(--yellow);padding:7px 12px;font-size:10px;font-weight:900}.hero h1{font-family:"Yu Mincho",serif;font-size:clamp(58px,10vw,132px);line-height:.98;letter-spacing:-.07em;margin:28px 0}.hero h1 em{font-style:normal;background:linear-gradient(transparent 64%,#efb72eb8 64%)}.deck{display:grid;grid-template-columns:1.2fr .8fr;gap:7vw}.lead{font-family:"Yu Mincho",serif;font-size:clamp(22px,2.7vw,33px)}.memo{border-top:5px solid var(--yellow);padding-top:14px}.rules{margin-top:5vh;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid;background:var(--paper)}.rule{padding:22px;border-right:1px solid}.rule:last-child{border:0}.rule small,.kicker{font-size:10px;font-weight:900;letter-spacing:.13em}.rule strong{display:block;font-family:"Yu Mincho",serif;font-size:23px}.section{padding:8vh 0;border-top:1px solid}.section h2{font-family:"Yu Mincho",serif;font-size:clamp(38px,5vw,62px);line-height:1.25;letter-spacing:-.05em}.copy{max-width:760px;font-size:17px}.prompt{margin:38px 0;background:#111;color:#fff;padding:28px}.prompt small{color:var(--yellow);font-weight:900}.prompt p{font-family:"Yu Mincho",serif;font-size:21px}.battle{display:grid;grid-template-columns:1fr 70px 1fr;border:1px solid}.side{padding:32px}.ai{background:#efe8f7}.human{background:#f5ead7}.side h3{font-family:"Yu Mincho",serif;font-size:38px}.vs{display:flex;align-items:center;justify-content:center;border-left:1px solid;border-right:1px solid;font:900 22px Georgia}.products{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid}.product{padding:20px;border-right:1px solid;background:var(--paper);min-height:360px;display:flex;flex-direction:column}.product:last-child{border:0}.thumb{height:140px;border:1px solid #ddd;background:#eee9e0;display:flex;align-items:center;justify-content:center}.tag{background:#f0df98;padding:4px 8px;width:max-content;font-size:9px;font-weight:900}.product h3{font-family:"Yu Mincho",serif;font-size:21px}.price{margin-top:auto;font:900 25px Georgia}.score{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid;background:var(--paper)}.score div{text-align:center;padding:20px;border-right:1px solid}.score div:last-child{border:0}.score b{display:block;font-size:10px}.score strong{font:900 32px Georgia}.editor{margin:5vh 0;background:#f0df98;padding:30px;transform:rotate(-.4deg)}.editor p{font-family:"Yu Mincho",serif;font-size:23px}.result{border:1px dashed;padding:40px;text-align:center}.result strong{font-family:"Yu Mincho",serif;font-size:clamp(30px,5vw,52px)}.nextgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.next{border:1px solid;padding:30px;background:var(--paper)}.comic{border-top:7px solid #2b66d2}.select{border-top:7px solid var(--green)}.next h3{font-family:"Yu Mincho",serif;font-size:32px}.btn{display:inline-block;background:#111;color:#fff;padding:12px 18px;font-size:11px;font-weight:900}.notice{font-size:12px;color:#716b63;padding:28px 0}footer{border-top:1px solid;padding:35px}.foot{width:min(1120px,92vw);margin:auto;display:flex;justify-content:space-between;font-size:10px;font-weight:900}@media(max-width:750px){.deck,.battle,.nextgrid{grid-template-columns:1fr}.rules{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr 1fr}.vs{min-height:55px;border-left:0;border-right:0;border-top:1px solid;border-bottom:1px solid}.score{grid-template-columns:1fr}.score div{border-right:0;border-bottom:1px solid}}</style></head><body>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIに1万円、渡してみた。｜YOMON。LAB #001</title>
+<meta name="description" content="同じ予算1万円で、AIと人間は何を選ぶ？ YOMON。LAB #001。">
+<style>
+*{box-sizing:border-box}
+:root{--bg:#f7f3ea;--ink:#151515;--yellow:#efb72e;--red:#d64239;--purple:#7651a8;--green:#278559;--paper:#fffdf8;--muted:#726c64;--line:#cbc4b9}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+header{border-bottom:1px solid;position:sticky;top:0;background:#f7f3eaf2;z-index:10;backdrop-filter:blur(12px)}
+.head,.wrap{width:min(1120px,92vw);margin:auto}.head{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:900 38px Georgia;letter-spacing:-.07em}.logo i{color:var(--red);font-style:normal}.back{font-size:10px;font-weight:900;border-bottom:1px solid}
+.hero{width:min(1240px,94vw);margin:auto;padding:7vh 0}.label{background:var(--yellow);padding:7px 12px;font-size:10px;font-weight:900}
+.hero h1{font-family:"Yu Mincho",serif;font-size:clamp(58px,10vw,132px);line-height:.98;letter-spacing:-.07em;margin:28px 0}.hero h1 em{font-style:normal;background:linear-gradient(transparent 64%,#efb72eb8 64%)}
+.deck{display:grid;grid-template-columns:1.2fr .8fr;gap:7vw}.lead{font-family:"Yu Mincho",serif;font-size:clamp(22px,2.7vw,33px)}
+.memo{border-top:5px solid var(--yellow);padding-top:14px}.rules{margin-top:5vh;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid;background:var(--paper)}
+.rule{padding:22px;border-right:1px solid}.rule:last-child{border:0}.rule small,.kicker{font-size:10px;font-weight:900;letter-spacing:.13em}.rule strong{display:block;font-family:"Yu Mincho",serif;font-size:23px}
+.section{padding:8vh 0;border-top:1px solid}.section h2{font-family:"Yu Mincho",serif;font-size:clamp(38px,5vw,62px);line-height:1.25;letter-spacing:-.05em}
+.copy{max-width:760px;font-size:17px}.prompt{margin:38px 0;background:#111;color:#fff;padding:28px}.prompt small{color:var(--yellow);font-weight:900}.prompt p{font-family:"Yu Mincho",serif;font-size:21px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid;background:var(--paper)}
+.product{padding:20px;border-right:1px solid;min-height:470px;display:flex;flex-direction:column}.product:last-child{border:0}
+.thumb{height:170px;border:1px solid #ddd;background:linear-gradient(145deg,#eee9e0,#fff);display:flex;align-items:center;justify-content:center;font-family:"Yu Mincho",serif;font-size:26px;text-align:center;padding:16px}
+.tag{background:#f0df98;padding:4px 8px;width:max-content;font-size:9px;font-weight:900}.product h3{font-family:"Yu Mincho",serif;font-size:21px;line-height:1.35;margin-bottom:8px}
+.price{font:900 28px Georgia;margin:8px 0}.why{font-size:13px;color:var(--muted)}.shop{margin-top:auto;display:inline-block;background:#111;color:#fff;padding:11px 13px;font-size:10px;font-weight:900;text-align:center}
+.total{margin-top:26px;background:#111;color:#fff;padding:34px;display:flex;justify-content:space-between;gap:24px;align-items:end}.total strong{font:900 clamp(52px,8vw,96px) Georgia}.total p{margin:0}.left{color:var(--yellow);font-weight:900}
+.editor{margin:5vh 0;background:#f0df98;padding:30px;transform:rotate(-.4deg)}.editor p{font-family:"Yu Mincho",serif;font-size:23px}
+.human{border:1px dashed #999;padding:40px;background:rgba(255,255,255,.25)}.human h3{font-family:"Yu Mincho",serif;font-size:36px}.pending{display:inline-block;border:1px solid;border-radius:99px;padding:5px 9px;font-size:10px;font-weight:900}
+.nextgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.next{border:1px solid;padding:30px;background:var(--paper)}.comic{border-top:7px solid #2b66d2}.select{border-top:7px solid var(--green)}.next h3{font-family:"Yu Mincho",serif;font-size:32px}.btn{display:inline-block;background:#111;color:#fff;padding:12px 18px;font-size:11px;font-weight:900}
+.notice{font-size:12px;color:var(--muted);padding:28px 0}footer{border-top:1px solid;padding:35px}.foot{width:min(1120px,92vw);margin:auto;display:flex;justify-content:space-between;font-size:10px;font-weight:900}
+@media(max-width:750px){.deck,.nextgrid{grid-template-columns:1fr}.rules{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr}.product{border-right:0;border-bottom:1px solid}.total{flex-direction:column;align-items:flex-start}}
+</style></head>
+<body>
 <header><div class="head"><a class="logo" href="../index.html">YOMON<i>。</i></a><a class="back" href="../index.html">← ISSUE 001へ</a></div></header>
-<section class="hero"><span class="label">YOMON。LAB #001</span><h1>AIに1万円、<br><em>渡してみた。</em></h1><div class="deck"><p class="lead">AIは「探す」だけじゃなく、<br>本当に「選ぶ」ことまでできるのか。</p><aside class="memo"><b>LAB QUESTION</b><p>同じ予算。同じテーマ。AIと人間なら、どっちの買い物が「残る」？</p></aside></div><div class="rules"><div class="rule"><small>BUDGET</small><strong>10,000円以内</strong></div><div class="rule"><small>THEME</small><strong>仕事環境を快適に</strong></div><div class="rule"><small>PLAYER</small><strong>AI vs HUMAN</strong></div><div class="rule"><small>GOAL</small><strong>使い続けたい物</strong></div></div></section>
+
+<section class="hero">
+<span class="label">YOMON。LAB #001</span>
+<h1>AIに1万円、<br><em>渡してみた。</em></h1>
+<div class="deck"><p class="lead">AIは「探す」だけじゃなく、<br>本当に「選ぶ」ことまでできるのか。</p><aside class="memo"><b>LAB QUESTION</b><p>同じ予算。同じテーマ。AIと人間なら、どっちの買い物が「残る」？</p></aside></div>
+<div class="rules"><div class="rule"><small>BUDGET</small><strong>10,000円以内</strong></div><div class="rule"><small>THEME</small><strong>仕事環境を快適に</strong></div><div class="rule"><small>PLAYER</small><strong>AI vs HUMAN</strong></div><div class="rule"><small>GOAL</small><strong>使い続けたい物</strong></div></div>
+</section>
+
 <main class="wrap">
-<section class="section"><div class="kicker">01 / WHY THIS LAB?</div><h2>検索の次は、<br>「選ぶ」を任せてみる。</h2><div class="copy"><p>ISSUE 001のCOVERでは、検索が「キーワードを入れて探す」から「条件を話して相談する」方向へ変わっていることを追った。</p><p>現在のAIショッピングは、予算・好み・条件を会話しながら絞り込み、商品を比較するところまで来ている。</p><p>だったら、記事を読んで終わりじゃつまらない。<strong>本当に1万円を渡したら、AIは何を選ぶのか。</strong>人間が同じ条件で選んだら、結果はどう変わるのか。YOMON。LABで確かめる。</p></div><div class="prompt"><small>THE SAME ORDER</small><p>「予算は税込10,000円以内。仕事・作業環境を快適にするためのものを選んでください。1商品に全額使っても、複数商品に分けてもOK。なぜそれを選ぶのかも教えてください。」</p></div></section>
-<section class="section"><div class="kicker">02 / THE BATTLE</div><h2>条件は同じ。<br>考え方は、たぶん違う。</h2><div class="battle"><div class="side ai"><small>PLAYER A</small><h3>AI</h3><p>予算・用途・制約を整理し、公開情報から候補を比較する。</p><ul><li>条件適合</li><li>費用対効果</li><li>組み合わせ</li><li>汎用性</li></ul></div><div class="vs">VS</div><div class="side human"><small>PLAYER B</small><h3>HUMAN</h3><p>日常の小さな不満、使いやすさ、欲しさ、直感まで含めて選ぶ。</p><ul><li>実生活の不満</li><li>使いたさ</li><li>触った感覚</li><li>「これ欲しい」</li></ul></div></div></section>
-<section class="section"><div class="kicker">03 / SHOPPING LIST</div><h2>何を選んだ？</h2><p class="copy"><strong>ここは実際の購入商品が確定してから本番データへ。</strong> 商品名・価格・結果を架空で埋めず、検証の信頼性を守る。</p><div class="products"><div class="product"><span class="tag">AI PICK / 01</span><div class="thumb">商品写真</div><h3>購入確定後に掲載</h3><p>AIが選んだ理由。</p><div class="price">¥—</div></div><div class="product"><span class="tag">AI PICK / 02</span><div class="thumb">商品写真</div><h3>購入確定後に掲載</h3><p>予算配分と狙い。</p><div class="price">¥—</div></div><div class="product"><span class="tag">HUMAN PICK / 01</span><div class="thumb">商品写真</div><h3>購入確定後に掲載</h3><p>人間が選んだ理由。</p><div class="price">¥—</div></div><div class="product"><span class="tag">HUMAN PICK / 02</span><div class="thumb">商品写真</div><h3>購入確定後に掲載</h3><p>必要性・直感も記録。</p><div class="price">¥—</div></div></div></section>
-<section class="section"><div class="kicker">04 / TEST RULE</div><h2>買って終わりには、しない。</h2><div class="score"><div><b>使いやすさ</b><strong>/10</strong></div><div><b>変化</b><strong>/10</strong></div><div><b>コスパ</b><strong>/10</strong></div><div><b>継続使用</b><strong>YES?</strong></div><div><b>総合</b><strong>/40</strong></div></div><div class="editor"><b>YOMON。RULE</b><p>良かったものだけ紹介しない。<br>微妙なら、微妙だった理由まで残す。</p></div><p class="copy">購入後は一定期間実際に使う。第一印象だけでなく、「数日後も使っているか」「机に残っているか」まで見る。</p></section>
-<section class="section"><div class="kicker">05 / RESULT</div><h2>結局、残ったのは？</h2><div class="result"><strong>検証後、ここに結果が入る。</strong><p>AI勝利 / HUMAN勝利だけではなく、AIに任せると強い部分、人間の直感が勝った部分まで残す。</p></div></section>
-<section class="section"><div class="kicker">CONTINUE READING</div><h2>この実験は、<br>ここで終わらない。</h2><div class="nextgrid"><a class="next comic" href="../comic/lab-001/"><small>COMIC #001</small><h3>AIに1万円渡した。</h3><p>この実験を漫画でも読む。</p><span class="btn">COMICへ →</span></a><a class="next select" href="../select/"><small>YOMON。SELECT</small><h3>結局、残ったもの。</h3><p>実際に使って、それでも残った商品だけを見る。</p><span class="btn">SELECTへ →</span></a></div><div class="notice"><strong>収益化について：</strong> SELECT等にアフィリエイトリンクを含む場合は、その旨を読者に分かる形で明示します。LABの評価自体はリンクの有無で変えません。</div></section>
-</main><footer><div class="foot"><span>YOMON。— まだ知らない方が、面白い。</span><span>LAB #001 / ISSUE 001</span></div></footer></body></html>
+<section class="section"><div class="kicker">01 / AI PICK</div><h2>AIは、<br>4つに分けた。</h2>
+<div class="copy"><p>1万円を1商品に全部使うのではなく、<strong>「光」「姿勢」「入力」「配線」</strong>の4方向へ分散。高級品より、毎日起きる小さな不満を複数消す方を選んだ。</p></div>
+
+<div class="products">
+<article class="product"><span class="tag">AI PICK 01 / LIGHT</span><div class="thumb">LED<br>DESK LIGHT</div><h3>オーム電機 LEDデスクランプ クランプ LTC-LS36-W</h3><div class="price">¥2,118</div><p class="why">机の面積を取りにくいクランプ式。まず「見る環境」に予算を使う。</p><a class="shop" href="https://www.amazon.co.jp/s?k=LTC-LS36-W" target="_blank" rel="noopener">販売先を確認 →</a></article>
+
+<article class="product"><span class="tag">AI PICK 02 / STAND</span><div class="thumb">LAPTOP<br>STAND</div><h3>サンワダイレクト 200-STN077 ノートPCスタンド</h3><div class="price">¥3,580</div><p class="why">高さ・角度を変えて、画面位置と机上スペースをまとめて改善する。</p><a class="shop" href="https://www.amazon.co.jp/s?k=200-STN077" target="_blank" rel="noopener">販売先を確認 →</a></article>
+
+<article class="product"><span class="tag">AI PICK 03 / MOUSE</span><div class="thumb">M240<br>SILENT</div><h3>Logicool M240 Silent Bluetoothマウス</h3><div class="price">¥1,990</div><p class="why">毎日触る入力機器。静音＋Bluetoothで、小さいストレスを減らす。</p><a class="shop" href="https://shopping.yahoo.co.jp/search?p=Logicool%20M240%20Silent" target="_blank" rel="noopener">販売先を確認 →</a></article>
+
+<article class="product"><span class="tag">AI PICK 04 / CABLE</span><div class="thumb">CABLE<br>HOLDER</div><h3>ELECOM EKC-CCH01BK ケーブルホルダー</h3><div class="price">¥1,518</div><p class="why">ケーブルが落ちる、探す、絡まるという地味な手間を消す。</p><a class="shop" href="https://www.amazon.co.jp/s?k=EKC-CCH01BK" target="_blank" rel="noopener">販売先を確認 →</a></article>
+</div>
+
+<div class="total"><div><small>AI TOTAL</small><br><strong>¥9,206</strong></div><div><p>予算 ¥10,000</p><p class="left">残金 ¥794</p><p>AIは、予算を使い切らなかった。</p></div></div>
+
+<div class="editor"><b>YOMON。編集メモ</b><p>高いものを1個、ではなかった。<br>AIは「小さい不満を4つ消す」に1万円を使った。</p></div>
+</section>
+
+<section class="section"><div class="kicker">02 / HUMAN PICK</div><h2>じゃあ、人間は？</h2>
+<div class="human"><span class="pending">NEXT / 選考中</span><h3>AIの結果を見たうえで、<br>人間側は別の思想で選ぶ。</h3><p>人間側は「毎日触るものに深く使う」を軸に、1万円の使い道を確定する。ここは次の更新で実商品を入れる。</p></div>
+</section>
+
+<section class="section"><div class="kicker">03 / NEXT</div><h2>この実験は、<br>まだ途中。</h2>
+<div class="nextgrid"><a class="next comic" href="../comic/lab-001/"><small>COMIC #001</small><h3>AIに1万円渡した。</h3><p>この実験を漫画でも読む。</p><span class="btn">COMICへ →</span></a><a class="next select" href="../select/"><small>YOMON。SELECT</small><h3>結局、残ったもの。</h3><p>実際に使って、それでも残った商品だけを見る。</p><span class="btn">SELECTへ →</span></a></div>
+<div class="notice"><strong>価格について：</strong> 価格は2026年8月14日に確認した参考価格。販売価格・在庫は変動します。現在のリンクは通常リンクで、アフィリエイトリンクではありません。</div>
+</section>
+</main>
+
+<footer><div class="foot"><span>YOMON。— まだ知らない方が、面白い。</span><span>LAB #001 / AI PICK</span></div></footer>
+</body></html>
