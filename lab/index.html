@@ -38,6 +38,29 @@ header{border-bottom:1px solid;position:sticky;top:0;background:#f7f3eaf2;z-inde
 .nextgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.next{border:1px solid;padding:30px;background:var(--paper)}.comic{border-top:7px solid var(--blue)}.select{border-top:7px solid var(--green)}.next h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:32px}.btn{display:inline-block;background:#111;color:#fff;padding:12px 18px;font-size:11px;font-weight:900}
 .notice{font-size:12px;color:var(--muted);padding:28px 0}footer{border-top:1px solid;padding:35px}.foot{width:min(1120px,92vw);margin:auto;display:flex;justify-content:space-between;font-size:10px;font-weight:900}
 @media(max-width:760px){.deck,.compare-intro,.point,.nextgrid{grid-template-columns:1fr}.rules{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr}.product{border-right:0;border-bottom:1px solid}.total{flex-direction:column;align-items:flex-start}.test{grid-template-columns:1fr}.test div{border-right:0;border-bottom:1px solid}}
+
+/* --- YOMON。収益導線 --- */
+.aff-note{margin:0 0 30px;padding:18px 20px;border:1px solid var(--line);background:#fffaf0;font-size:13px}
+.aff-note b{display:block;margin-bottom:4px}
+.verdict{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:32px 0}
+.verdict-card{border:1px solid;background:var(--paper);padding:28px;position:relative}
+.verdict-card.ai-v{border-top:8px solid var(--purple)}.verdict-card.hu-v{border-top:8px solid var(--red)}
+.verdict-card .who{font-size:10px;font-weight:900;letter-spacing:.08em}
+.verdict-card h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:29px;line-height:1.35;margin:10px 0}
+.verdict-card p{font-size:14px;color:var(--muted)}
+.buybox{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+.buybox b{display:block;font-size:12px;margin-bottom:10px}
+.buylinks{display:flex;gap:8px;flex-wrap:wrap}
+.buylink{display:inline-block;border:1px solid #111;padding:10px 13px;font-size:11px;font-weight:900;background:#fff}
+.buylink.primary{background:#111;color:#fff}
+.select-gate{margin:5vh 0;border:1px solid;background:var(--paper);display:grid;grid-template-columns:.65fr 1.35fr}
+.select-mark{background:var(--green);color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:space-between}
+.select-mark span{font:900 54px Georgia,serif}.select-copy{padding:34px}
+.select-copy h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:34px;line-height:1.3;margin:8px 0}
+.criteria{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.criteria span{font-size:10px;font-weight:900;border:1px solid;padding:5px 8px;border-radius:99px}
+.softcta{display:inline-block;margin-top:8px;border-bottom:2px solid;font-size:12px;font-weight:900}
+@media(max-width:760px){.verdict,.select-gate{grid-template-columns:1fr}}
+
 </style></head>
 <body>
 <header><div class="head"><a class="logo" href="../index.html">YOMON<i>。</i></a><a class="back" href="../index.html">← 創刊号へ戻る</a></div></header>
@@ -106,10 +129,61 @@ header{border-bottom:1px solid;position:sticky;top:0;background:#f7f3eaf2;z-inde
 </section>
 
 <section class="section">
-<div class="kicker">05 / 次は、本当に使う。</div>
-<h2>勝負は、<br>買ってから。</h2>
-<div class="test"><div><b>使いやすさ</b><strong>/10</strong></div><div><b>変化</b><strong>/10</strong></div><div><b>コスパ</b><strong>/10</strong></div><div><b>毎日使いたい</b><strong>/10</strong></div><div><b>合計</b><strong>/40</strong></div></div>
-<p class="copy">ここからは実際に購入・使用して比較する。結果を先に決めない。微妙だったものは、その理由も含めて残す。</p>
+<div class="kicker">05 / 買って、使って、残す。</div>
+<h2>おすすめするのは、<br>「残ったもの」だけ。</h2>
+
+<div class="aff-note">
+<b>広告・アフィリエイトについて</b>
+このページやYOMON。SELECTには、今後アフィリエイト広告を含む場合があります。
+ただし、リンクの有無や報酬額で評価・掲載順位は変えません。実際に試した結果を優先します。
+</div>
+
+<p class="copy">商品リンクを並べて終わりにはしない。まず実際に使い、5項目で評価する。そのうえで「また自分のお金で買いたい」と思えたものだけを、YOMON。SELECTへ残す。</p>
+
+<div class="test">
+<div><b>使いやすさ</b><strong>/10</strong></div>
+<div><b>変化</b><strong>/10</strong></div>
+<div><b>コスパ</b><strong>/10</strong></div>
+<div><b>毎日使いたい</b><strong>/10</strong></div>
+<div><b>合計</b><strong>/40</strong></div>
+</div>
+
+<div class="editor"><b>YOMON。SELECT 掲載ルール</b><p>売れるから載せる、ではなく。<br>使ったあとも残ったから、載せる。</p></div>
+
+<div class="verdict">
+<div class="verdict-card ai-v">
+<span class="who">AI側 / 検証後に確定</span>
+<h3>AIが選んだ4商品から、<br>何個残る？</h3>
+<p>良かった点だけでなく、使わなくなった理由も記録。SELECT入りした商品のみ購入導線を強くする。</p>
+<div class="buybox"><b>今すぐ候補を確認したい人へ</b><div class="buylinks">
+<a class="buylink" href="https://www.amazon.co.jp/s?k=LTC-LS36-W" target="_blank" rel="sponsored noopener">デスクライト</a>
+<a class="buylink" href="https://www.amazon.co.jp/s?k=200-STN077" target="_blank" rel="sponsored noopener">PCスタンド</a>
+<a class="buylink" href="https://www.amazon.co.jp/s?k=Logicool+M240+Silent" target="_blank" rel="sponsored noopener">M240</a>
+</div></div>
+</div>
+
+<div class="verdict-card hu-v">
+<span class="who">人間側 / 検証後に確定</span>
+<h3>人間が選んだ3商品から、<br>何個残る？</h3>
+<p>スペックだけでなく「触りたくなる」「毎日使いたい」も評価。所有満足まで含めて判断する。</p>
+<div class="buybox"><b>今すぐ候補を確認したい人へ</b><div class="buylinks">
+<a class="buylink" href="https://www.amazon.co.jp/s?k=Logicool+K380s" target="_blank" rel="sponsored noopener">K380s</a>
+<a class="buylink" href="https://www.amazon.co.jp/s?k=Logicool+M750" target="_blank" rel="sponsored noopener">M750</a>
+<a class="buylink" href="https://www.ikea.com/jp/ja/search/?q=SKRUTT" target="_blank" rel="sponsored noopener">デスクパッド</a>
+</div></div>
+</div>
+</div>
+
+<div class="select-gate">
+<div class="select-mark"><b>YOMON。SELECT</b><span>→</span></div>
+<div class="select-copy">
+<small>検証を通過した商品の出口</small>
+<h3>結局、残ったもの。</h3>
+<p>LABで試して終わりではなく、残った商品だけをSELECTにまとめる。そこで「なぜ残った？」「誰に向く？」「微妙なところは？」まで確認してから購入先へ進める。</p>
+<div class="criteria"><span>実際に使用</span><span>継続して使った</span><span>弱点も掲載</span><span>向く人を明記</span></div>
+<a class="btn" href="../select/">SELECTで比較する →</a>
+</div>
+</div>
 </section>
 
 <section class="section">
@@ -119,7 +193,7 @@ header{border-bottom:1px solid;position:sticky;top:0;background:#f7f3eaf2;z-inde
 <a class="next comic" href="../comic/lab-001/"><small>漫画 #001</small><h3>AIに1万円渡した。</h3><p>この実験を短い漫画で読む。</p><span class="btn">漫画を読む →</span></a>
 <a class="next select" href="../select/"><small>YOMON。SELECT</small><h3>結局、残ったもの。</h3><p>実際に使って、それでも残った商品だけを見る。</p><span class="btn">SELECTを見る →</span></a>
 </div>
-<div class="notice"><strong>価格について：</strong> 掲載価格は2026年8月14日に確認した参考価格です。販売価格・在庫は変動します。現在の購入先リンクは通常リンクで、アフィリエイトリンクではありません。</div>
+<div class="notice"><strong>価格・広告について：</strong> 掲載価格は確認時点の参考価格です。価格・在庫は変動します。アフィリエイトプログラム導入後は、購入リンクを提携リンクへ差し替え、広告であることを分かる形で表示します。</div>
 </section>
 </main>
 
