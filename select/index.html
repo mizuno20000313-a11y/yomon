@@ -1,71 +1,32 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>YOMON。SELECT｜残ったものだけ。</title>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>YOMON。SELECT｜結局、残ったもの。</title>
 <style>
-*{box-sizing:border-box}
-:root{--bg:#f3f0e8;--ink:#111;--paper:#fff;--muted:#6b6861;--line:#c9c4b9;--soft:#ebe7de}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.75}
-a{color:inherit;text-decoration:none}
-.bar{position:sticky;top:0;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:rgba(243,240,232,.96);border-bottom:1px solid #111;backdrop-filter:blur(12px)}
-.logo{font-weight:950;font-size:29px;letter-spacing:-.07em}
-.nav{display:flex;gap:15px;font-size:10px;font-weight:900;letter-spacing:.09em}
-.wrap{width:min(1180px,90vw);margin:auto}
-.hero{padding:9vh 0 7vh;border-bottom:1px solid #111}
-.eyebrow{font-size:11px;font-weight:900;letter-spacing:.16em}
-h1,h2,h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;letter-spacing:-.045em}
-h1{font-size:clamp(58px,10vw,130px);line-height:.96;margin:25px 0}
-h2{font-size:clamp(35px,5vw,64px);line-height:1.15}
-h3{font-size:clamp(25px,3vw,39px);line-height:1.28}
-.dek{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(20px,2.5vw,32px);max-width:800px}
-.section{padding:9vh 0;border-bottom:1px solid #111}
-.status{display:inline-flex;align-items:center;gap:8px;border:1px solid #111;border-radius:100px;padding:6px 11px;font-size:10px;font-weight:900;letter-spacing:.07em}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.product{background:#fff;border:1px solid #111;overflow:hidden}
-.product-visual{height:220px;background:var(--soft);display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid #111}
-.product-visual .type{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(38px,6vw,68px);letter-spacing:-.04em}
-.product-visual .num{position:absolute;top:16px;left:18px;font-size:10px;font-weight:900;letter-spacing:.15em}
-.product-body{padding:28px}
-.product-name{font-weight:900;font-size:13px;letter-spacing:.02em}
-.price{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:35px;margin:12px 0}
-.meta{display:grid;grid-template-columns:105px 1fr;gap:9px;font-size:13px;padding:7px 0;border-top:1px solid var(--line)}
-.meta b{font-size:10px;letter-spacing:.08em}
-.note{margin:20px 0;padding:18px;border-left:4px solid #111;background:var(--soft);font-size:14px}
-.shops{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:18px}
-.shop{border:1px solid #111;padding:12px 10px;text-align:center;font-size:11px;font-weight:900}
-.shop:hover{background:#111;color:#fff}
-.shop.disabled{color:#aaa;border-color:#ccc;pointer-events:none}
-.total{background:#111;color:#fff;padding:7vh 5vw;margin:7vh 0}
-.total .amount{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(60px,10vw,120px);line-height:1}
-.total-grid{display:flex;justify-content:space-between;gap:30px;align-items:end;flex-wrap:wrap}
-.rejected{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.reject{border-top:1px solid #111;padding:20px 0}
-.reject strong{display:block;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:23px;margin-bottom:8px}
-.small{font-size:12px;color:var(--muted)}
-.cta{display:block;background:#111;color:#fff;padding:30px;margin-top:30px}
-.cta strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:30px}
-.select-rule{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid #111}
-.select-rule div{padding:25px 15px;border-right:1px solid #111;text-align:center}
-.select-rule div:last-child{border-right:0}
-.select-rule b{display:block;font-size:11px;letter-spacing:.1em}
-.select-rule span{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:20px}
-.item-link{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;border-top:1px solid #111}
-.item-link strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:24px}
-.disclosure{font-size:11px;color:var(--muted);padding:15px 0}
-footer{padding:40px 5vw 70px;font-size:11px;font-weight:800}
-@media(max-width:720px){
- .nav{gap:8px;font-size:8px}.grid{grid-template-columns:1fr}.shops{grid-template-columns:1fr 1fr}
- .rejected{grid-template-columns:1fr}.select-rule{grid-template-columns:1fr}.select-rule div{border-right:0;border-bottom:1px solid #111}.select-rule div:last-child{border-bottom:0}
- .product-visual{height:180px}
-}
+*{box-sizing:border-box}:root{--bg:#f7f3ea;--paper:#fffdf8;--ink:#151515;--muted:#716b63;--green:#278559;--red:#d64239;--line:#cbc4b9}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",sans-serif;line-height:1.85}
+a{color:inherit;text-decoration:none}header{position:sticky;top:0;z-index:10;background:#f7f3eaf2;border-bottom:1px solid}
+.head,.wrap{width:min(1120px,92vw);margin:auto}.head{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:900 38px Georgia;letter-spacing:-.07em}.logo i{color:var(--red);font-style:normal}.back{font-size:10px;font-weight:900;border-bottom:1px solid}
+.hero{width:min(1240px,94vw);margin:auto;padding:7vh 0}.label{display:inline-block;background:var(--green);color:#fff;padding:7px 12px;font-size:10px;font-weight:900}
+.hero h1{font-family:"Yu Mincho",serif;font-size:clamp(58px,10vw,128px);line-height:.98;letter-spacing:-.07em;margin:25px 0}
+.hero p{font-family:"Yu Mincho",serif;font-size:clamp(21px,2.7vw,32px);max-width:780px}
+.section{padding:8vh 0;border-top:1px solid}.kicker{font-size:10px;font-weight:900;letter-spacing:.12em}.section h2{font-family:"Yu Mincho",serif;font-size:clamp(38px,5vw,62px);line-height:1.22;letter-spacing:-.05em}
+.copy{max-width:760px;font-size:17px}.disclosure{border:1px solid var(--line);background:#fff9ef;padding:18px 20px;font-size:13px;margin:28px 0}
+.rulegrid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid;background:var(--paper)}.rule{padding:20px;text-align:center;border-right:1px solid}.rule:last-child{border:0}.rule b{display:block;font-size:10px}.rule strong{font-family:"Yu Mincho",serif;font-size:20px}
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin:25px 0}.chip{border:1px solid;border-radius:99px;padding:7px 11px;font-size:10px;font-weight:900;background:#fff}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid;background:var(--paper);display:grid;grid-template-columns:.42fr .58fr;min-height:340px}
+.visual{background:#edf8f1;border-right:1px solid;display:flex;align-items:center;justify-content:center;padding:22px;text-align:center;font-family:"Yu Mincho",serif;font-size:30px;position:relative}
+.badge{position:absolute;top:14px;left:14px;background:var(--green);color:#fff;padding:5px 8px;font-size:9px;font-weight:900}
+.body{padding:26px;display:flex;flex-direction:column}.body h3{font-family:"Yu Mincho",serif;font-size:28px;line-height:1.35;margin:8px 0}.price{font:900 26px Georgia}.meta{font-size:13px;color:var(--muted)}
+.points{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.point{background:#f4f1eb;padding:10px;font-size:12px}.point b{display:block;font-size:9px}
+.cardlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.btn{display:inline-block;background:#111;color:#fff;padding:11px 13px;font-size:10px;font-weight:900}.soft{background:#fff;color:#111;border:1px solid}
+.quote{margin:6vh 0;background:#e7f2eb;padding:30px}.quote p{font-family:"Yu Mincho",serif;font-size:24px}.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}.comparebox{border:1px solid;background:var(--paper);padding:28px}.comparebox h3{font-family:"Yu Mincho",serif;font-size:30px}
+footer{border-top:1px solid;padding:35px}.foot{width:min(1120px,92vw);margin:auto;display:flex;justify-content:space-between;font-size:10px;font-weight:900}
+@media(max-width:760px){.rulegrid{grid-template-columns:1fr}.cards,.compare{grid-template-columns:1fr}.card{grid-template-columns:1fr}.visual{min-height:200px;border-right:0;border-bottom:1px solid}}
 </style>
-</head>
-<body><header class="bar"><a class="logo" href="../index.html">YOMON。</a><nav class="nav"><a href="../lab/">LAB</a><a href="../comic/">COMIC</a><a href="./">SELECT</a></nav></header>
+</head><body>
+<header><div class="head"><a class="logo" href="../index.html">YOMON<i>。</i></a><a class="back" href="../index.html">← 創刊号へ戻る</a></div></header>
+<section class="hero"><span class="label">YOMON。SELECT</span><h1>結局、<br>残ったもの。</h1><p>ネットには「おすすめ」が多すぎる。だからYOMON。では、調べる。比べる。試す。そのあとも残ったものだけをここへ。</p></section>
 <main class="wrap">
-<section class="hero"><div class="eyebrow">YOMON。SELECT</div><h1>残ったものだけ。</h1><p class="dek">ネットには「おすすめ」が多すぎる。YOMON。では、調べる。選ぶ。試す。残ったものだけをここへ。</p></section>
-<section class="section"><div class="eyebrow">HOW IT WORKS</div><h2>商品には、履歴がある。</h2>
-<div class="select-rule"><div><b>01</b><span>FOUND</span></div><div><b>02</b><span>PICKED</span></div><div><b>03</b><span>TESTING</span></div><div><b>04</b><span>TESTED</span></div><div><b>05</b><span>SELECTED</span></div></div>
-<p>今はLAB 001の候補が「PICKED / 未検証」の段階。実際に試して残ったものだけがSELECTEDへ昇格します。</p></section>
-<section class="section"><div class="eyebrow">FROM LAB 001</div><h2>現在のSELECT候補。</h2><a class="item-link" href="items/clamp-light.html"><div><span class="status">PICKED / 未検証</span><br><strong>クランプ式 LEDデスクライト</strong></div><span>¥2,399 →</span></a><a class="item-link" href="items/pc-stand.html"><div><span class="status">PICKED / 未検証</span><br><strong>折りたたみ式 ノートPCスタンド</strong></div><span>¥3,870〜 →</span></a><a class="item-link" href="items/m240.html"><div><span class="status">PICKED / 未検証</span><br><strong>Logicool M240 Silent Bluetoothマウス</strong></div><span>¥2,310 →</span></a><a class="item-link" href="items/cable-holder.html"><div><span class="status">PICKED / 未検証</span><br><strong>ELECOM 断線防止型ケーブルホルダー EKC-CHS01BK</strong></div><span>¥968 →</span></a></section>
-<section class="section"><div class="eyebrow">PROMISE</div><h2>「おすすめ」より、<br>なぜここにあるのか。</h2>
-<p class="dek">各商品ページでは、採用理由だけでなく、弱点・未検証かどうか・元になったLAB・複数の購入先まで残します。</p></section>
-</main><footer>© YOMON。 / SELECT — まだ知らない方が、面白い。</footer></body></html>
+<section class="section"><div class="kicker">SELECTの考え方</div><h2>売れるから載せる、<br>ではなく。</h2><p class="copy">YOMON。SELECTはランキングではない。LABや実体験の中で見つけた商品・サービスを、検証の過程ごと残す場所。良かった点だけでなく、弱点や「向いていない人」も書く。</p><div class="disclosure"><b>広告・アフィリエイトについて</b><br>このページには今後アフィリエイト広告を含む場合があります。提携の有無や報酬額で評価・掲載順位は変えません。</div><div class="rulegrid"><div class="rule"><b>01</b><strong>見つける</strong></div><div class="rule"><b>02</b><strong>選ぶ</strong></div><div class="rule"><b>03</b><strong>試す</strong></div><div class="rule"><b>04</b><strong>残る</strong></div><div class="rule"><b>05</b><strong>紹介する</strong></div></div></section>
+<section class="section"><div class="kicker">創刊号 / 仕事環境</div><h2>今、残る候補。</h2><div class="filter"><span class="chip">すべて</span><span class="chip">AIが選んだ</span><span class="chip">人間が選んだ</span><span class="chip">入力機器</span><span class="chip">デスク環境</span></div><div class="cards"><a class="card" href="items/k380s.html"><div class="visual"><span class="badge">人間が選んだ</span>キーボード</div><div class="body"><small>検証前</small><h3>ロジクール Pebble Keys 2 K380s</h3><div class="price">¥4,381</div><p class="meta">毎日もっとも長く触る道具のひとつ。コンパクトで机を広く使いやすい。</p><div class="points"><div class="point"><b>向いてる人</b>文章入力が多い人 / 机をすっきりさせたい人</div><div class="point"><b>弱点</b>テンキーが必要な人、深い打鍵感が好きな人には合わない可能性。</div></div><div class="cardlinks"><span class="btn">詳しく見る →</span><span class="btn soft">LABから来た商品</span></div></div></a><a class="card" href="items/m750.html"><div class="visual"><span class="badge">人間が選んだ</span>マウス</div><div class="body"><small>検証前</small><h3>ロジクール Signature M750</h3><div class="price">¥3,967</div><p class="meta">毎日触る回数が多いから、スクロールとクリックの快適さに予算を使う。</p><div class="points"><div class="point"><b>向いてる人</b>仕事用マウスを少し良くしたい人</div><div class="point"><b>弱点</b>軽さ最優先やゲーミング用途には別候補が合う。</div></div><div class="cardlinks"><span class="btn">詳しく見る →</span><span class="btn soft">LABから来た商品</span></div></div></a><a class="card" href="items/m240.html"><div class="visual"><span class="badge">AIが選んだ</span>静音マウス</div><div class="body"><small>検証前</small><h3>ロジクール M240 Silent</h3><div class="price">¥1,864</div><p class="meta">低予算でも毎日のクリック音と接続の小さなストレスを減らせる。</p><div class="points"><div class="point"><b>向いてる人</b>安く静かなBluetoothマウスが欲しい人</div><div class="point"><b>弱点</b>多機能ボタンや高速スクロールを求める人にはシンプルすぎる。</div></div><div class="cardlinks"><span class="btn">詳しく見る →</span><span class="btn soft">LABから来た商品</span></div></div></a><a class="card" href="items/pcstand.html"><div class="visual"><span class="badge">AIが選んだ</span>PCスタンド</div><div class="body"><small>検証前</small><h3>サンワダイレクト 200-STN077</h3><div class="price">¥3,580</div><p class="meta">画面位置と机上スペースをまとめて変えられる。</p><div class="points"><div class="point"><b>向いてる人</b>ノートPCを長時間使う人</div><div class="point"><b>弱点</b>外部モニター中心の人には優先度が低い。</div></div><div class="cardlinks"><span class="btn">詳しく見る →</span><span class="btn soft">LABから来た商品</span></div></div></a></div><div class="quote"><b>まだ「SELECTED」ではありません。</b><p>現在は検証前の候補。実際に使ったあと、「また自分のお金で買いたい」と思えたものだけを正式なYOMON。SELECTへ残します。</p></div></section>
+<section class="section"><div class="kicker">AI 対 人間</div><h2>何を良くしたいかで、<br>選び方は変わる。</h2><div class="compare"><div class="comparebox"><h3>AI</h3><ul><li>小さな不満を複数改善</li><li>予算を広く分散</li><li>合理性・汎用性を優先</li></ul><a class="btn" href="../lab/">AIの1万円を見る →</a></div><div class="comparebox"><h3>人間</h3><ul><li>毎日触るものへ集中</li><li>所有満足も含める</li><li>「使いたい」を優先</li></ul><a class="btn" href="../lab/">人間の1万円を見る →</a></div></div></section>
+</main><footer><div class="foot"><span>YOMON。— まだ知らない方が、面白い。</span><span>SELECT / 創刊号</span></div></footer></body></html>
