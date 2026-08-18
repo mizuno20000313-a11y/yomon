@@ -1,19 +1,80 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>YOMON。</title><style>
-*{box-sizing:border-box}body{margin:0;background:#f6f2e9;color:#171717;font-family:-apple-system,BlinkMacSystemFont,'Yu Gothic',sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}.head,.wrap{width:min(1100px,92vw);margin:auto}header{position:sticky;top:0;background:#f6f2e9ef;border-bottom:1px solid;z-index:9}.head{height:66px;display:flex;align-items:center;justify-content:space-between}.logo{font:900 36px Georgia}.logo i{font-style:normal;color:#e55346}nav{display:flex;gap:14px;font-size:11px;font-weight:900}.hero,.section{padding:7vh 0}.hero h1,.section h2{font-family:'Yu Mincho',serif;letter-spacing:-.05em}.hero h1{font-size:clamp(48px,8vw,96px);line-height:1.05}.hero p{font-size:20px;max-width:720px}.searchbox{display:flex;gap:8px;margin:25px 0}.searchbox input{flex:1;padding:14px;border:1px solid;background:#fff}.searchbox button,.btn{background:#111;color:#fff;border:0;padding:13px 16px;font-weight:900}.moods,.tags{display:flex;gap:7px;flex-wrap:wrap}.mood,.tag{border:1px solid;background:#fff;border-radius:99px;padding:7px 10px;font-size:10px;font-weight:900}.section{border-top:1px solid}.section h2{font-size:clamp(34px,5vw,58px)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid;background:#fffdf8;padding:22px}.card h3,.row h3{font-family:'Yu Mincho',serif}.card h3{font-size:24px}.row{display:grid;grid-template-columns:80px 1fr auto;gap:15px;align-items:center;border-top:1px solid;padding:18px 0}.row p{margin:2px 0;color:#756e65;font-size:12px}.type{font-size:10px;font-weight:900}.empty{padding:35px;border:1px dashed;text-align:center;color:#756e65}.cover{width:min(1120px,92vw);margin:4vh auto 0;min-height:560px;background:linear-gradient(135deg,#bed1cf,#e9c79f 55%,#687985);border:1px solid;position:relative}.covertext{position:absolute;left:4%;bottom:6%;background:#fffdf8ee;padding:22px;width:min(720px,85%)}.covertext h1{font-family:'Yu Mincho',serif;font-size:clamp(44px,7vw,78px);line-height:1.05}.article{width:min(820px,90vw);margin:auto}.article p{font-size:17px}.memo{background:#f1df9d;padding:25px;margin:5vh 0}.related{margin:6vh 0}.kicker{font-size:10px;font-weight:900;letter-spacing:.12em}
-@media(max-width:720px){.cards{grid-template-columns:1fr}.searchbox{flex-direction:column}.row{grid-template-columns:65px 1fr}.row span:last-child{display:none}}
-</style></head><body>
-<header><div class="head"><a class="logo" href="./">YOMON<i>。</i></a><nav><a href="記事/検索しなくなる日.html">記事</a><a href="漫画/">漫画</a><a href="研究室/">研究室</a><a href="選択/">選ぶ</a><a href="検索/">🔍 探す</a></nav></div></header>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOMON。｜まだ知らない方が、面白い。</title>
+<style>
+*{box-sizing:border-box}:root{--bg:#f6f2e9;--paper:#fffdf8;--ink:#171717;--muted:#746d65;--line:#c9c1b5;--red:#e55346;--yellow:#efbd3e;--blue:#5479b8;--green:#438266}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",sans-serif;line-height:1.75}a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:#f6f2e9ee;border-bottom:1px solid}.head,.wrap{width:min(1140px,92vw);margin:auto}.head{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font:900 38px Georgia}.logo i{font-style:normal;color:var(--red)}nav{display:flex;gap:14px;font-size:11px;font-weight:900}
+.search-area{width:min(1140px,92vw);margin:3vh auto 4vh;background:var(--paper);border:1px solid;padding:20px}.searchbox{display:flex;gap:8px}.searchbox input{flex:1;padding:13px;border:1px solid}.searchbox button,.btn{background:#111;color:#fff;border:0;padding:12px 16px;font-size:11px;font-weight:900}.moods{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.mood{border:1px solid;background:#fff;border-radius:99px;padding:7px 10px;font-size:10px;font-weight:900}
+.latest{width:min(1240px,94vw);margin:0 auto 8vh;border:1px solid;background:var(--paper);display:grid;grid-template-columns:1.1fr .9fr}.latest-visual{min-height:610px;background:linear-gradient(135deg,#a6bfbd 0 37%,#e4c09a 37% 62%,#5e7481 62%);position:relative}.latest-visual:after{content:"";position:absolute;width:38%;height:67%;right:14%;top:16%;border-radius:40px;background:#111;transform:rotate(7deg)}.latest-copy{padding:42px;display:flex;flex-direction:column;justify-content:space-between}.new{display:inline-block;background:var(--red);color:#fff;font-size:9px;font-weight:900;padding:6px 9px;border-radius:99px}.kicker{font-size:10px;font-weight:900;letter-spacing:.12em}.latest h1,.section h2{font-family:"Yu Mincho",serif;letter-spacing:-.05em}.latest h1{font-size:clamp(52px,7vw,92px);line-height:1.02;margin:24px 0}.latest p{font-family:"Yu Mincho",serif;font-size:22px}
+.section{padding:8vh 0;border-top:1px solid}.section h2{font-size:clamp(36px,5vw,58px);line-height:1.16}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end}.desc{max-width:580px;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.card{border:1px solid;background:var(--paper)}.visual{aspect-ratio:16/10;position:relative;display:flex;align-items:end;padding:18px;font:900 27px "Yu Mincho",serif}.visual .new{position:absolute;top:12px;left:12px}.ai{background:linear-gradient(135deg,#bdd1cf,#e8c49d)}.comic{background:linear-gradient(135deg,#dce7fb,#8eacd7)}.lab{background:linear-gradient(135deg,#f7e6a7,#d9ad30)}.select{background:linear-gradient(135deg,#dceee4,#8bb79d)}.cardbody{padding:19px}.cardbody h3{font-family:"Yu Mincho",serif;font-size:24px;margin:7px 0}.cardbody p{font-size:12px;color:var(--muted)}
+.feature{display:grid;grid-template-columns:.8fr 1.2fr;border:1px solid;background:var(--paper)}.feature .visual{aspect-ratio:auto;min-height:300px}.featurecopy{padding:30px}.featurecopy h3{font-family:"Yu Mincho",serif;font-size:34px}.archive{display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center;border-top:1px solid;padding:18px 0}.archive b{font:900 29px Georgia}.archive h3{font-family:"Yu Mincho",serif;font-size:22px;margin:0}
+footer{border-top:1px solid;padding:30px 0;font-size:10px}
+@media(max-width:760px){nav{gap:8px}.latest,.feature{grid-template-columns:1fr}.latest-visual{min-height:390px}.latest-copy{padding:27px}.grid3,.grid2{grid-template-columns:1fr}.section-head{display:block}.searchbox{flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="head"><a class="logo" href="./">YOMON<i>。</i></a><nav><a href="#latest">最新</a><a href="#start">まずここから</a><a href="#comic">漫画</a><a href="#lab">研究室</a><a href="#select">選ぶ</a><a href="検索/">🔍 探す</a></nav></div></header>
+
+<section class="search-area">
+<div class="kicker">何が気になる？</div>
+<div class="searchbox"><input id="q" placeholder="AI、仕事、買い物、デスク…"><button onclick="go()">YOMON。を検索 →</button></div>
+<div class="moods"><button class="mood" onclick="m('AIを使ってみたい')">🤖 AI</button><button class="mood" onclick="m('仕事をラクにしたい')">💼 仕事</button><button class="mood" onclick="m('買ってよかったもの')">🛒 買ってよかった</button><button class="mood" onclick="m('3分で読みたい')">📖 3分</button></div>
+</section>
+
+<section class="latest" id="latest">
+<div class="latest-visual"></div>
+<div class="latest-copy"><div><span class="new">NEW</span><div class="kicker" style="margin-top:12px">LATEST COVER / ISSUE 001</div><h1>検索しなく<br>なる日。</h1><p>「探す」から「聞く」へ。<br>私たちの選び方はどう変わる？</p></div><a class="btn" href="記事/検索しなくなる日.html">最新号を読む →</a></div>
+</section>
+
 <main class="wrap">
-<section class="hero"><span class="kicker">YOMON。DISCOVERY</span><h1>気になるものを、<br>次々見つける。</h1><p>記事、漫画、実験、商品。YOMON。の中をキーワードや気分から探せます。</p>
-<div class="searchbox"><input id="q" placeholder="AI、仕事、デスク、買い物…"><button onclick="go()">検索 →</button></div>
-<div class="moods"><button class="mood" onclick="m('AIを使ってみたい')">🤖 AIを使ってみたい</button><button class="mood" onclick="m('仕事をラクにしたい')">💼 仕事をラクにしたい</button><button class="mood" onclick="m('買ってよかったもの')">🛒 買ってよかった</button><button class="mood" onclick="m('3分で読みたい')">📖 3分で読みたい</button></div></section>
-<section class="section"><span class="kicker">NEW</span><h2>まず、ここから。</h2><div class="cards" id="cards"></div></section>
-<section class="section"><span class="kicker">FOR YOU</span><h2>この辺、好きかも。</h2><div id="foryou"></div></section>
+<section class="section" id="start">
+<div class="section-head"><div><span class="kicker">START HERE / まずここから</span><h2>はじめてなら、この3つ。</h2></div><p class="desc">読む・試す・選ぶ。YOMON。が一番分かりやすい入口。</p></div>
+<div class="grid3">
+<a class="card" href="記事/検索しなくなる日.html"><div class="visual ai"><span class="new">NEW</span>読む。</div><div class="cardbody"><small>ARTICLE</small><h3>検索しなくなる日。</h3><p>今起きている変化を雑誌みたいに読む。</p></div></a>
+<a class="card" href="研究室/"><div class="visual lab"><span class="new">NEW</span>試す。</div><div class="cardbody"><small>LAB</small><h3>AIに1万円、渡してみた。</h3><p>気になったことを本当にやってみる。</p></div></a>
+<a class="card" href="選択/"><div class="visual select"><span class="new">NEW</span>選ぶ。</div><div class="cardbody"><small>SELECT</small><h3>結局、残ったもの。</h3><p>試したあとも使いたいものだけ。</p></div></a>
+</div>
+</section>
+
+<section class="section">
+<div class="section-head"><div><span class="kicker">FOR YOU / この辺、好きかも。</span><h2>次に見るなら、これ。</h2></div><p class="desc">関連するものを画像つきで。</p></div>
+<div class="grid3">
+<a class="card" href="漫画/"><div class="visual comic"><span class="new">NEW</span>3分で読む。</div><div class="cardbody"><small>COMIC</small><h3>最近、Google使わなくなった。</h3><p>漫画から入るYOMON。</p></div></a>
+<a class="card" href="研究室/"><div class="visual lab"><span class="new">NEW</span>AI vs HUMAN</div><div class="cardbody"><small>LAB</small><h3>同じ1万円、何を選ぶ？</h3><p>AIと人間で買い物が違った。</p></div></a>
+<a class="card" href="選択/"><div class="visual select"><span class="new">NEW</span>残った理由。</div><div class="cardbody"><small>SELECT</small><h3>買う前に、YOMON。</h3><p>弱点まで見てから選ぶ。</p></div></a>
+</div>
+</section>
+
+<section class="section" id="comic">
+<div class="section-head"><div><span class="kicker">COMIC / 漫画から読む</span><h2>長文の前に、3分だけ。</h2></div></div>
+<a class="feature" href="漫画/"><div class="visual comic"><span class="new">NEW</span>「最近、検索してない。」</div><div class="featurecopy"><small>COMIC #001</small><h3>それって、もう検索じゃない？</h3><p>検索からAIへ変わる日常を短い漫画で。</p><span class="btn">漫画を読む →</span></div></a>
+</section>
+
+<section class="section" id="lab">
+<div class="section-head"><div><span class="kicker">LAB / 研究室</span><h2>気になったら、本当に試す。</h2></div></div>
+<a class="feature" href="研究室/"><div class="visual lab"><span class="new">NEW</span>AI × ¥10,000</div><div class="featurecopy"><small>LAB #001</small><h3>AIに1万円、渡してみた。</h3><p>同じ予算。同じテーマ。AIと人間なら何を選ぶ？</p><span class="btn">実験を見る →</span></div></a>
+</section>
+
+<section class="section" id="select">
+<div class="section-head"><div><span class="kicker">SELECT / 選ぶ</span><h2>結局、残ったもの。</h2></div></div>
+<div class="grid2">
+<a class="card" href="選択/"><div class="visual select"><span class="new">NEW</span>仕事環境。</div><div class="cardbody"><small>WORK SELECT</small><h3>毎日触るものから。</h3><p>キーボード、マウス、PCスタンド。</p></div></a>
+<a class="card" href="選択/"><div class="visual ai"><span class="new">NEW</span>買う前に見る。</div><div class="cardbody"><small>WHY SELECT?</small><h3>良いところだけじゃない。</h3><p>向く人、弱点、元LABまで。</p></div></a>
+</div>
+</section>
+
+<section class="section"><span class="kicker">BACK NUMBER</span><h2>あとから、めくる。</h2>
+<a class="archive" href="記事/検索しなくなる日.html"><b>001</b><div><h3>検索しなくなる日。 <span class="new">NEW</span></h3><small>AI / SEARCH / SHOPPING</small></div><span>→</span></a>
+</section>
 </main>
-<script src="データ/content-data.js"></script><script>
-const D=window.YOMON_CONTENT||[];
+
+<footer><div class="wrap">YOMON。— まだ知らない方が、面白い。</div></footer>
+<script>
 function go(){location.href='検索/?q='+encodeURIComponent(document.getElementById('q').value)}
 function m(x){location.href='検索/?mood='+encodeURIComponent(x)}
-document.getElementById('cards').innerHTML=D.slice(0,3).map(x=>`<a class="card" href="${x.url.replace('../','')}"><span class="type">${x.type}</span><h3>${x.title}</h3><p>${x.description}</p><div class="tags">${x.tags.slice(0,3).map(t=>`<span class="tag">#${t}</span>`).join('')}</div></a>`).join('');
-document.getElementById('foryou').innerHTML=D.slice(1,4).map(x=>`<a class="row" href="${x.url.replace('../','')}"><span class="type">${x.type}</span><div><h3>${x.title}</h3><p>${x.description}</p></div><span>→</span></a>`).join('');
-</script></body></html>
+</script>
+</body></html>
