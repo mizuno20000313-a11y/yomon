@@ -14,10 +14,53 @@ header{position:sticky;top:0;z-index:20;background:#f6f2e9ee;border-bottom:1px s
 .feature{display:grid;grid-template-columns:.8fr 1.2fr;border:1px solid;background:var(--paper)}.feature .visual{aspect-ratio:auto;min-height:300px}.featurecopy{padding:30px}.featurecopy h3{font-family:"Yu Mincho",serif;font-size:34px}.archive{display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center;border-top:1px solid;padding:18px 0}.archive b{font:900 29px Georgia}.archive h3{font-family:"Yu Mincho",serif;font-size:22px;margin:0}
 footer{border-top:1px solid;padding:30px 0;font-size:10px}
 @media(max-width:760px){nav{gap:8px}.latest,.feature{grid-template-columns:1fr}.latest-visual{min-height:390px}.latest-copy{padding:27px}.grid3,.grid2{grid-template-columns:1fr}.section-head{display:block}.searchbox{flex-direction:column}}
+
+.about-yomon{width:min(1140px,92vw);margin:4vh auto 7vh;border-top:1px solid;border-bottom:1px solid;padding:6vh 0}
+.about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:7vw;align-items:start}
+.about-label{position:sticky;top:100px}
+.about-label .bigmark{font:900 clamp(56px,8vw,105px) Georgia,serif;line-height:.85;letter-spacing:-.08em}
+.about-label .bigmark i{font-style:normal;color:var(--red)}
+.about-copy h2{font-family:"Yu Mincho",serif;font-size:clamp(35px,5vw,58px);line-height:1.25;letter-spacing:-.05em;margin:10px 0 24px}
+.about-copy .intro{font-family:"Yu Mincho",serif;font-size:21px;line-height:1.9}
+.about-copy p{font-size:14px}
+.about-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:28px}
+.about-nav a{border-top:3px solid;padding:13px 4px;font-size:10px;font-weight:900}
+.editor-note{margin-top:35px;background:#fffdf8;border:1px solid;padding:22px 24px;display:grid;grid-template-columns:150px 1fr;gap:22px}
+.editor-note b{font:900 13px Georgia,serif;letter-spacing:.08em}
+.editor-note p{margin:0;font-family:"Yu Mincho",serif;font-size:17px}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}.about-label{position:static}.about-nav{grid-template-columns:1fr 1fr}.editor-note{grid-template-columns:1fr;gap:8px}}
+
 </style>
 </head>
 <body>
 <header><div class="head"><a class="logo" href="./">YOMON<i>。</i></a><nav><a href="#latest">最新</a><a href="#start">まずここから</a><a href="#comic">漫画</a><a href="#lab">研究室</a><a href="#select">選ぶ</a><a href="検索/">🔍 探す</a></nav></div></header>
+
+
+<section class="about-yomon">
+  <div class="about-grid">
+    <div class="about-label">
+      <span class="kicker">ABOUT YOMON。</span>
+      <div class="bigmark">YO<br>MON<i>。</i></div>
+    </div>
+    <div class="about-copy">
+      <span class="kicker">YOMON。って？</span>
+      <h2>気になるものを、ちゃんと読む。<br>面白そうなら、実際に試す。</h2>
+      <p class="intro">YOMON。は、AI・仕事・モノ・暮らし・ネットで話題になっていることなど、<strong>編集部が「これ、ちょっと気になる。」と思ったものを集めるWebマガジン</strong>です。</p>
+      <p>記事をじっくり読む日もあれば、漫画でサクッと見る日もある。気になったものは実際に試して、使ってよかったものは「SELECT」に残していきます。</p>
+      <p>ネットには情報が多すぎるから、全部を追いかけなくていい。<strong>編集部が気になったものから、YOMON。</strong></p>
+      <div class="about-nav">
+        <a href="記事/検索しなくなる日.html">読む<br>ARTICLE →</a>
+        <a href="漫画/">漫画<br>COMIC →</a>
+        <a href="研究室/">試す<br>LAB →</a>
+        <a href="選択/">選ぶ<br>SELECT →</a>
+      </div>
+      <div class="editor-note">
+        <b>FROM THE EDITORS</b>
+        <p>「これ面白そう。」「これ、本当？」から企画は始まります。今日も編集部が、ネットのどこかで気になるものを探しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="search-area">
 <div class="kicker">何が気になる？</div>
