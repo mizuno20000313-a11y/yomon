@@ -222,6 +222,133 @@ footer{border-top:1px solid;padding:30px 0;font-size:10px}
   .editorial-nav a:nth-child(-n+2){border-bottom:1px solid var(--ink)}
 }
 
+
+/* ===== ABOUT YOMON。 V3 / BALANCED EDITORIAL ===== */
+.editorial-v3{
+  width:min(1120px,92vw);
+  margin:5vh auto 7vh;
+  padding:6vh 0 7vh;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.editorial-grid-v3{
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:58px;
+  align-items:start;
+}
+.editorial-side-v3{
+  padding-top:4px;
+}
+.door-logo-v3{
+  margin-top:18px;
+  font:900 clamp(54px,6.8vw,82px)/.92 Georgia,serif;
+  letter-spacing:-.08em;
+}
+.door-logo-v3 span{color:var(--red)}
+.side-copy-v3{
+  margin-top:18px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.14em;
+  line-height:1.8;
+  color:var(--muted);
+}
+.editorial-main-v3{
+  max-width:760px;
+}
+.editorial-title-v3{
+  margin:10px 0 24px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(36px,4.6vw,58px);
+  line-height:1.3;
+  letter-spacing:-.045em;
+}
+.editorial-intro-v3{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+  margin-bottom:36px;
+}
+.editorial-intro-v3 p{
+  margin:0;
+  font-size:14px;
+  line-height:2;
+}
+.editorial-conversation-v3{
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  padding:22px 0 20px;
+  margin-bottom:30px;
+}
+.conversation-head-v3{
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:14px;
+}
+.conversation-row-v3{
+  display:grid;
+  grid-template-columns:72px 1fr;
+  gap:14px;
+  align-items:center;
+  padding:10px 0;
+}
+.conversation-row-v3.alt{
+  background:rgba(239,189,62,.16);
+  margin:0 -10px;
+  padding:10px;
+}
+.speaker-v3{
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.1em;
+}
+.speech-v3{
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:18px;
+  line-height:1.55;
+}
+.conversation-caption-v3{
+  margin:14px 0 0;
+  font-size:11px;
+  color:var(--muted);
+}
+.editorial-nav-v3{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--ink);
+  background:var(--paper);
+}
+.editorial-nav-v3 a{
+  padding:15px 13px;
+  border-right:1px solid var(--ink);
+  display:grid;
+  gap:2px;
+}
+.editorial-nav-v3 a:last-child{border-right:0}
+.editorial-nav-v3 span{
+  font:900 16px Georgia,serif;
+  color:#b7afa4;
+}
+.editorial-nav-v3 b{
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:18px;
+}
+.editorial-nav-v3 small{
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+@media(max-width:760px){
+  .editorial-grid-v3{grid-template-columns:1fr;gap:28px}
+  .editorial-side-v3{border-bottom:1px solid var(--line);padding-bottom:22px}
+  .editorial-intro-v3{grid-template-columns:1fr}
+  .editorial-nav-v3{grid-template-columns:1fr 1fr}
+  .editorial-nav-v3 a:nth-child(2){border-right:0}
+  .editorial-nav-v3 a:nth-child(-n+2){border-bottom:1px solid var(--ink)}
+}
+
 </style>
 </head>
 <body>
@@ -229,65 +356,50 @@ footer{border-top:1px solid;padding:30px 0;font-size:10px}
 
 
 
-<section class="editorial-door">
-  <div class="editorial-grid">
-    <div class="editorial-mast">
-      <span class="door-kicker">ABOUT / EDITORIAL DESK</span>
-      <div class="door-logo">YOMON<span>。</span></div>
-      <div class="door-sub">WEB MAGAZINE</div>
-      <div class="door-page">P.01</div>
+
+<section class="editorial-door editorial-v3">
+  <div class="editorial-grid-v3">
+    <div class="editorial-side-v3">
+      <span class="door-kicker">ABOUT YOMON。</span>
+      <div class="door-logo-v3">YOMON<span>。</span></div>
+      <p class="side-copy-v3">WEB MAGAZINE<br>READ / TRY / CHOOSE</p>
     </div>
 
-    <div class="editorial-main">
-      <div class="editorial-headline">
-        <span>「これ、ちょっと気になる。」</span><br>
-        だいたい企画は、<br>
-        そこから始まります。
+    <div class="editorial-main-v3">
+      <span class="kicker">YOMON。って？</span>
+      <h2 class="editorial-title-v3">「これ、ちょっと気になる。」<br>企画は、そこから始まります。</h2>
+
+      <div class="editorial-intro-v3">
+        <p>AI、仕事、モノ、暮らし。ネットで見つけた話題まで。YOMON。は、<strong>編集部が気になったものを持ち寄って、調べて、必要なら実際に試してみるWebマガジン</strong>です。</p>
+        <p>AIも使う。でも、最後に「これ面白い」「これは違うかも」と判断するのは人。だから、同じテーマでも人によって見え方が少し変わります。</p>
       </div>
 
-      <div class="editorial-body">
-        <p>AI、仕事、モノ、暮らし。ネットで見つけた話題まで。YOMON。は、<strong>編集部が実際に読んで、調べて、気になったら試してみるWebマガジン</strong>です。</p>
-        <p>AIは使う。でも、全部をAIに任せるわけじゃない。最後はちゃんと、人が見て、人が触って、人が言う。</p>
-      </div>
-
-      <div class="editorial-quote">
-        <span>編集部のルール</span>
-        <strong>「おすすめです。」だけでは終わらせない。</strong>
-        <p>良かった。微妙だった。思っていたのと違った。そこまで含めて、ちゃんと残す。</p>
-      </div>
-
-      <div class="editorial-voices">
-        <div class="voice voice-a">
-          <div class="voice-name">編集A</div>
-          <p>「これ本当に便利なの？」</p>
+      <div class="editorial-conversation-v3">
+        <div class="conversation-head-v3">編集部の会話から、企画が生まれる。</div>
+        <div class="conversation-row-v3">
+          <div class="speaker-v3">編集A</div>
+          <div class="speech-v3">「これ、本当に便利なの？」</div>
         </div>
-        <div class="voice voice-b">
-          <div class="voice-name">編集B</div>
-          <p>「じゃあ、実際に買ってみようよ。」</p>
+        <div class="conversation-row-v3 alt">
+          <div class="speaker-v3">編集B</div>
+          <div class="speech-v3">「じゃあ、実際に試してみよう。」</div>
         </div>
-        <div class="voice voice-c">
-          <div class="voice-name">編集A</div>
-          <p>「思ってたのと違った（笑）」</p>
+        <div class="conversation-row-v3">
+          <div class="speaker-v3">編集A</div>
+          <div class="speech-v3">「思ってたのと、ちょっと違った。」</div>
         </div>
+        <p class="conversation-caption-v3">そんな会話も、YOMON。ではそのまま記事のきっかけになります。</p>
       </div>
 
-      <div class="editorial-caption">— そんな会話も、そのまま企画になります。</div>
-
-      <div class="editorial-nav">
+      <div class="editorial-nav-v3">
         <a href="記事/検索しなくなる日.html"><span>01</span><b>読む</b><small>ARTICLE</small></a>
         <a href="漫画/"><span>02</span><b>漫画</b><small>COMIC</small></a>
         <a href="研究室/"><span>03</span><b>試す</b><small>LAB</small></a>
         <a href="選択/"><span>04</span><b>選ぶ</b><small>SELECT</small></a>
       </div>
-
-      <div class="margin-note">
-        <span>EDITOR'S NOTE</span>
-        <p>AIで早く作る。人がちゃんと読む。YOMON。は、その間にいたい。</p>
-      </div>
     </div>
   </div>
 </section>
-
 <section class="search-area">
 <div class="kicker">何が気になる？</div>
 <div class="searchbox"><input id="q" placeholder="AI、仕事、買い物、デスク…"><button onclick="go()">YOMON。を検索 →</button></div>
