@@ -30,33 +30,259 @@ footer{border-top:1px solid;padding:30px 0;font-size:10px}
 .editor-note p{margin:0;font-family:"Yu Mincho",serif;font-size:17px}
 @media(max-width:760px){.about-grid{grid-template-columns:1fr}.about-label{position:static}.about-nav{grid-template-columns:1fr 1fr}.editor-note{grid-template-columns:1fr;gap:8px}}
 
+
+/* ===== EDITORIAL DESK / MAGAZINE DOOR ===== */
+.editorial-door{
+  width:min(1180px,94vw);
+  margin:4vh auto 8vh;
+  padding:7vh 0 8vh;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  position:relative;
+}
+.editorial-grid{
+  display:grid;
+  grid-template-columns:.68fr 1.32fr;
+  gap:7vw;
+  align-items:start;
+}
+.editorial-mast{
+  position:sticky;
+  top:105px;
+  min-height:520px;
+  border-right:1px solid var(--line);
+  padding-right:4vw;
+}
+.door-kicker{
+  display:block;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.18em;
+  margin-bottom:24px;
+}
+.door-logo{
+  font:900 clamp(68px,9vw,120px)/.82 Georgia,serif;
+  letter-spacing:-.09em;
+}
+.door-logo span{color:var(--red)}
+.door-sub{
+  margin-top:20px;
+  font:900 12px/1.3 sans-serif;
+  letter-spacing:.22em;
+}
+.door-page{
+  position:absolute;
+  bottom:0;
+  left:0;
+  font:900 72px/1 Georgia,serif;
+  color:#d8d1c7;
+}
+
+.editorial-main{position:relative}
+.editorial-headline{
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(42px,5.7vw,74px);
+  line-height:1.18;
+  letter-spacing:-.055em;
+  margin-bottom:34px;
+  max-width:850px;
+}
+.editorial-headline span{
+  background:linear-gradient(transparent 64%,rgba(239,189,62,.58) 64%);
+}
+.editorial-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  max-width:850px;
+  margin-bottom:40px;
+}
+.editorial-body p{
+  margin:0;
+  font-size:14px;
+  line-height:2;
+}
+.editorial-quote{
+  border-top:5px solid var(--red);
+  border-bottom:1px solid var(--ink);
+  padding:22px 0 24px;
+  margin:0 0 38px;
+}
+.editorial-quote span{
+  display:block;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.15em;
+  color:var(--red);
+  margin-bottom:10px;
+}
+.editorial-quote strong{
+  display:block;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(24px,3vw,38px);
+  line-height:1.45;
+}
+.editorial-quote p{
+  margin:10px 0 0;
+  font-size:13px;
+  color:var(--muted);
+}
+.editorial-voices{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin:0 0 10px;
+}
+.voice{
+  min-height:150px;
+  border:1px solid var(--ink);
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transform:rotate(-.4deg);
+}
+.voice-b{background:#f0df98; transform:rotate(.5deg)}
+.voice-c{background:#edf4ef; transform:rotate(-.2deg)}
+.voice-name{
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+.voice p{
+  margin:20px 0 0;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:20px;
+  line-height:1.45;
+}
+.editorial-caption{
+  text-align:right;
+  font-size:11px;
+  color:var(--muted);
+  margin-bottom:36px;
+}
+.editorial-nav{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--ink);
+  background:var(--paper);
+}
+.editorial-nav a{
+  padding:18px 16px;
+  border-right:1px solid var(--ink);
+  display:grid;
+  gap:4px;
+}
+.editorial-nav a:last-child{border-right:0}
+.editorial-nav span{
+  font:900 22px Georgia,serif;
+  color:#b7afa4;
+}
+.editorial-nav b{
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:22px;
+}
+.editorial-nav small{
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.13em;
+}
+.margin-note{
+  margin-top:28px;
+  margin-left:auto;
+  width:min(420px,100%);
+  border-left:4px solid var(--yellow);
+  padding:12px 0 12px 16px;
+}
+.margin-note span{
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.margin-note p{
+  margin:7px 0 0;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:18px;
+  line-height:1.7;
+}
+@media(max-width:760px){
+  .editorial-grid{grid-template-columns:1fr}
+  .editorial-mast{
+    position:static;
+    min-height:auto;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    padding:0 0 30px;
+  }
+  .door-page{display:none}
+  .editorial-body{grid-template-columns:1fr}
+  .editorial-voices{grid-template-columns:1fr}
+  .editorial-nav{grid-template-columns:1fr 1fr}
+  .editorial-nav a:nth-child(2){border-right:0}
+  .editorial-nav a:nth-child(-n+2){border-bottom:1px solid var(--ink)}
+}
+
 </style>
 </head>
 <body>
 <header><div class="head"><a class="logo" href="./">YOMON<i>。</i></a><nav><a href="#latest">最新</a><a href="#start">まずここから</a><a href="#comic">漫画</a><a href="#lab">研究室</a><a href="#select">選ぶ</a><a href="検索/">🔍 探す</a></nav></div></header>
 
 
-<section class="about-yomon">
-  <div class="about-grid">
-    <div class="about-label">
-      <span class="kicker">ABOUT YOMON。</span>
-      <div class="bigmark">YO<br>MON<i>。</i></div>
+
+<section class="editorial-door">
+  <div class="editorial-grid">
+    <div class="editorial-mast">
+      <span class="door-kicker">ABOUT / EDITORIAL DESK</span>
+      <div class="door-logo">YOMON<span>。</span></div>
+      <div class="door-sub">WEB MAGAZINE</div>
+      <div class="door-page">P.01</div>
     </div>
-    <div class="about-copy">
-      <span class="kicker">YOMON。って？</span>
-      <h2>気になるものを、ちゃんと読む。<br>面白そうなら、実際に試す。</h2>
-      <p class="intro">YOMON。は、AI・仕事・モノ・暮らし・ネットで話題になっていることなど、<strong>編集部が「これ、ちょっと気になる。」と思ったものを集めるWebマガジン</strong>です。</p>
-      <p>記事をじっくり読む日もあれば、漫画でサクッと見る日もある。気になったものは実際に試して、使ってよかったものは「SELECT」に残していきます。</p>
-      <p>ネットには情報が多すぎるから、全部を追いかけなくていい。<strong>編集部が気になったものから、YOMON。</strong></p>
-      <div class="about-nav">
-        <a href="記事/検索しなくなる日.html">読む<br>ARTICLE →</a>
-        <a href="漫画/">漫画<br>COMIC →</a>
-        <a href="研究室/">試す<br>LAB →</a>
-        <a href="選択/">選ぶ<br>SELECT →</a>
+
+    <div class="editorial-main">
+      <div class="editorial-headline">
+        <span>「これ、ちょっと気になる。」</span><br>
+        だいたい企画は、<br>
+        そこから始まります。
       </div>
-      <div class="editor-note">
-        <b>FROM THE EDITORS</b>
-        <p>「これ面白そう。」「これ、本当？」から企画は始まります。今日も編集部が、ネットのどこかで気になるものを探しています。</p>
+
+      <div class="editorial-body">
+        <p>AI、仕事、モノ、暮らし。ネットで見つけた話題まで。YOMON。は、<strong>編集部が実際に読んで、調べて、気になったら試してみるWebマガジン</strong>です。</p>
+        <p>AIは使う。でも、全部をAIに任せるわけじゃない。最後はちゃんと、人が見て、人が触って、人が言う。</p>
+      </div>
+
+      <div class="editorial-quote">
+        <span>編集部のルール</span>
+        <strong>「おすすめです。」だけでは終わらせない。</strong>
+        <p>良かった。微妙だった。思っていたのと違った。そこまで含めて、ちゃんと残す。</p>
+      </div>
+
+      <div class="editorial-voices">
+        <div class="voice voice-a">
+          <div class="voice-name">編集A</div>
+          <p>「これ本当に便利なの？」</p>
+        </div>
+        <div class="voice voice-b">
+          <div class="voice-name">編集B</div>
+          <p>「じゃあ、実際に買ってみようよ。」</p>
+        </div>
+        <div class="voice voice-c">
+          <div class="voice-name">編集A</div>
+          <p>「思ってたのと違った（笑）」</p>
+        </div>
+      </div>
+
+      <div class="editorial-caption">— そんな会話も、そのまま企画になります。</div>
+
+      <div class="editorial-nav">
+        <a href="記事/検索しなくなる日.html"><span>01</span><b>読む</b><small>ARTICLE</small></a>
+        <a href="漫画/"><span>02</span><b>漫画</b><small>COMIC</small></a>
+        <a href="研究室/"><span>03</span><b>試す</b><small>LAB</small></a>
+        <a href="選択/"><span>04</span><b>選ぶ</b><small>SELECT</small></a>
+      </div>
+
+      <div class="margin-note">
+        <span>EDITOR'S NOTE</span>
+        <p>AIで早く作る。人がちゃんと読む。YOMON。は、その間にいたい。</p>
       </div>
     </div>
   </div>
