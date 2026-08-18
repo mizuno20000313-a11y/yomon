@@ -349,6 +349,35 @@ footer{border-top:1px solid;padding:30px 0;font-size:10px}
   .editorial-nav-v3 a:nth-child(-n+2){border-bottom:1px solid var(--ink)}
 }
 
+
+/* ===== YOMON V4 / EMOTION & ACTION ===== */
+:root{
+ --warm:#f5b95f; --softblue:#cbdde8; --sage:#cbdcc9; --peach:#f0c4b2; --lav:#d8cde2;
+}
+body{background:#f4efe5}
+.editorial-v3{background:linear-gradient(90deg,transparent 0 22%,rgba(240,196,178,.18) 22% 100%);padding-left:2vw;padding-right:2vw}
+.search-area{background:#fffaf1;box-shadow:0 10px 35px rgba(40,30,20,.05)}
+.latest{box-shadow:0 18px 50px rgba(40,30,20,.08)}
+.latest-copy{background:linear-gradient(180deg,#fffdf8,#fff8e9)}
+.latest-visual{background:linear-gradient(135deg,#bcd8e7 0 45%,#f2d09e 45% 67%,#78959e 67%)}
+.new{background:#efb92f;color:#171717}
+.section:nth-of-type(even){position:relative}
+.section:nth-of-type(even):before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:0;width:100vw;height:100%;background:rgba(203,221,232,.13);z-index:-1}
+.visual{transition:transform .22s ease,box-shadow .22s ease}
+.card:hover .visual,.feature:hover .visual{transform:translateY(-3px);box-shadow:0 13px 25px rgba(30,30,30,.09)}
+.card{transition:transform .2s ease}.card:hover{transform:translateY(-2px)}
+.cardbody h3{margin-bottom:5px}
+.action-link{display:inline-block;margin-top:13px;font-size:11px;font-weight:900;border-bottom:1px solid;padding-bottom:2px}
+.emotion-label{display:inline-block;font-size:9px;font-weight:900;letter-spacing:.1em;padding:5px 8px;margin-bottom:8px;background:#fff;border:1px solid}
+.human-note{margin-top:15px;border-left:3px solid var(--red);padding:9px 12px;background:#fff9f5;font-family:"Yu Mincho",serif;font-size:13px}
+.discovery-strip{width:min(1140px,92vw);margin:0 auto 6vh;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.discovery-item{min-height:130px;padding:20px;border:1px solid;display:flex;flex-direction:column;justify-content:space-between}
+.discovery-item:nth-child(1){background:#f7e5b2}.discovery-item:nth-child(2){background:#dbe9ef}.discovery-item:nth-child(3){background:#dce8d8}
+.discovery-item small{font-size:9px;font-weight:900}.discovery-item b{font-family:"Yu Mincho",serif;font-size:20px;line-height:1.45}
+.try-next{margin:7vh 0 2vh;padding:5vh 4vw;background:#252b28;color:#fff;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px}
+.try-next h2{margin:5px 0 0!important;color:#fff}.try-next p{color:#ddd}.try-next .btn{background:#fff;color:#111}
+@media(max-width:760px){.discovery-strip{grid-template-columns:1fr}.try-next{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -400,6 +429,22 @@ footer{border-top:1px solid;padding:30px 0;font-size:10px}
     </div>
   </div>
 </section>
+
+<section class="discovery-strip">
+  <a class="discovery-item" href="記事/検索しなくなる日.html">
+    <small>👀 30秒で気になる</small>
+    <b>検索って、これから<br>なくなるの？</b>
+  </a>
+  <a class="discovery-item" href="研究室/">
+    <small>🧪 編集部が試してる</small>
+    <b>AIに1万円を渡したら、<br>何を選ぶ？</b>
+  </a>
+  <a class="discovery-item" href="選択/">
+    <small>🛒 自分も試したくなる</small>
+    <b>結局、毎日使ったものは<br>どれだった？</b>
+  </a>
+</section>
+
 <section class="search-area">
 <div class="kicker">何が気になる？</div>
 <div class="searchbox"><input id="q" placeholder="AI、仕事、買い物、デスク…"><button onclick="go()">YOMON。を検索 →</button></div>
@@ -408,25 +453,25 @@ footer{border-top:1px solid;padding:30px 0;font-size:10px}
 
 <section class="latest" id="latest">
 <div class="latest-visual"></div>
-<div class="latest-copy"><div><span class="new">NEW</span><div class="kicker" style="margin-top:12px">LATEST COVER / ISSUE 001</div><h1>検索しなく<br>なる日。</h1><p>「探す」から「聞く」へ。<br>私たちの選び方はどう変わる？</p></div><a class="btn" href="記事/検索しなくなる日.html">最新号を読む →</a></div>
+<div class="latest-copy"><div><span class="new">NEW</span><div class="kicker" style="margin-top:12px">LATEST COVER / ISSUE 001</div><h1>検索しなく<br>なる日。</h1><p>「探す」から「聞く」へ。<br>私たちの選び方はどう変わる？</p><div class="human-note">編集部：「最近、自分たちも検索する回数が減ってない？」から始まった企画です。</div></div><a class="btn" href="記事/検索しなくなる日.html">最新号を読む →</a></div>
 </section>
 
 <main class="wrap">
 <section class="section" id="start">
 <div class="section-head"><div><span class="kicker">START HERE / まずここから</span><h2>はじめてなら、この3つ。</h2></div><p class="desc">読む・試す・選ぶ。YOMON。が一番分かりやすい入口。</p></div>
 <div class="grid3">
-<a class="card" href="記事/検索しなくなる日.html"><div class="visual ai"><span class="new">NEW</span>読む。</div><div class="cardbody"><small>ARTICLE</small><h3>検索しなくなる日。</h3><p>今起きている変化を雑誌みたいに読む。</p></div></a>
-<a class="card" href="研究室/"><div class="visual lab"><span class="new">NEW</span>試す。</div><div class="cardbody"><small>LAB</small><h3>AIに1万円、渡してみた。</h3><p>気になったことを本当にやってみる。</p></div></a>
-<a class="card" href="選択/"><div class="visual select"><span class="new">NEW</span>選ぶ。</div><div class="cardbody"><small>SELECT</small><h3>結局、残ったもの。</h3><p>試したあとも使いたいものだけ。</p></div></a>
+<a class="card" href="記事/検索しなくなる日.html"><div class="visual ai"><span class="new">NEW</span>読む。</div><div class="cardbody"><small>ARTICLE</small><h3>検索しなくなる日。</h3><p>今起きている変化を雑誌みたいに読む。</p><span class="action-link">この先、どうなる？ →</span></div></a>
+<a class="card" href="研究室/"><div class="visual lab"><span class="new">NEW</span>試す。</div><div class="cardbody"><small>LAB</small><h3>AIに1万円、渡してみた。</h3><p>気になったことを本当にやってみる。</p><div class="human-note">編集部、本当に試します。</div><span class="action-link">結果を見る →</span></div></a>
+<a class="card" href="選択/"><div class="visual select"><span class="new">NEW</span>選ぶ。</div><div class="cardbody"><small>SELECT</small><h3>結局、残ったもの。</h3><p>試したあとも使いたいものだけ。</p><span class="action-link">結局どれが残った？ →</span></div></a>
 </div>
 </section>
 
 <section class="section">
 <div class="section-head"><div><span class="kicker">FOR YOU / この辺、好きかも。</span><h2>次に見るなら、これ。</h2></div><p class="desc">関連するものを画像つきで。</p></div>
 <div class="grid3">
-<a class="card" href="漫画/"><div class="visual comic"><span class="new">NEW</span>3分で読む。</div><div class="cardbody"><small>COMIC</small><h3>最近、Google使わなくなった。</h3><p>漫画から入るYOMON。</p></div></a>
-<a class="card" href="研究室/"><div class="visual lab"><span class="new">NEW</span>AI vs HUMAN</div><div class="cardbody"><small>LAB</small><h3>同じ1万円、何を選ぶ？</h3><p>AIと人間で買い物が違った。</p></div></a>
-<a class="card" href="選択/"><div class="visual select"><span class="new">NEW</span>残った理由。</div><div class="cardbody"><small>SELECT</small><h3>買う前に、YOMON。</h3><p>弱点まで見てから選ぶ。</p></div></a>
+<a class="card" href="漫画/"><div class="visual comic"><span class="new">NEW</span>3分で読む。</div><div class="cardbody"><small>COMIC</small><h3>最近、Google使わなくなった。</h3><p>漫画から入るYOMON。</p><span class="action-link">3分だけ読んでみる →</span></div></a>
+<a class="card" href="研究室/"><div class="visual lab"><span class="new">NEW</span>AI vs HUMAN</div><div class="cardbody"><small>LAB</small><h3>同じ1万円、何を選ぶ？</h3><p>AIと人間で買い物が違った。</p><span class="action-link">自分ならどっち？ →</span></div></a>
+<a class="card" href="選択/"><div class="visual select"><span class="new">NEW</span>残った理由。</div><div class="cardbody"><small>SELECT</small><h3>買う前に、YOMON。</h3><p>弱点まで見てから選ぶ。</p><span class="action-link">選んだ理由を見る →</span></div></a>
 </div>
 </section>
 
@@ -451,6 +496,16 @@ footer{border-top:1px solid;padding:30px 0;font-size:10px}
 <section class="section"><span class="kicker">BACK NUMBER</span><h2>あとから、めくる。</h2>
 <a class="archive" href="記事/検索しなくなる日.html"><b>001</b><div><h3>検索しなくなる日。 <span class="new">NEW</span></h3><small>AI / SEARCH / SHOPPING</small></div><span>→</span></a>
 </section>
+
+<section class="section try-next">
+  <div>
+    <span class="kicker">NEXT / 次は何を試す？</span>
+    <h2>気になったら、やってみる。</h2>
+    <p>読むだけで終わらず、次に自分でも試したくなるテーマを集めます。</p>
+  </div>
+  <a class="btn" href="研究室/">研究室をのぞく →</a>
+</section>
+
 </main>
 
 <footer><div class="wrap">YOMON。— まだ知らない方が、面白い。</div></footer>
