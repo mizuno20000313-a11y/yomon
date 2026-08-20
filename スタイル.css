@@ -96,3 +96,14 @@ footer{background:#111;color:#fff;padding:20px 0}.footer-inner{display:flex;just
   .hero-copy h1{font-size:54px}
   .issue-card{min-height:410px}
 }
+
+/* IMAGE FIRST PREVIEW */
+.image-only-card{display:block;padding:0!important;background:transparent!important;overflow:hidden;border:1px solid var(--line);transition:transform .22s ease,box-shadow .22s ease}
+.image-only-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(42,34,25,.10)}
+.image-only-card>img{display:block;width:100%;height:auto!important;object-fit:contain!important;object-position:center!important;background:#f5f0e6}
+.image-first-start{gap:18px;align-items:start}
+.image-first-start .story-card{min-height:0}
+.image-first-pick{grid-template-columns:repeat(4,1fr) .90fr;gap:16px;align-items:start}
+.image-first-pick .request-card{min-height:0;align-self:start;padding:22px}
+@media(max-width:1100px){.image-first-pick{grid-template-columns:repeat(2,1fr)}.image-first-pick .request-card{grid-column:1/-1}}
+@media(max-width:700px){.image-first-start,.image-first-pick{grid-template-columns:1fr}.image-only-card{width:min(520px,100%);margin-inline:auto}}
